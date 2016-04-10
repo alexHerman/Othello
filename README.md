@@ -8,6 +8,6 @@ Valid move function - valid move encloses horizontal, vertical, or diagonal line
 
 Static Evaluation function - need to research -Hannah
 
-Function to determine end of game - board is filled or neither player can make a valid move - returns nil if not the end of the game, otherwise winner (or tie) - Alex
+Function to determine end of game - board is filled or neither player can make a valid move - returns nil if not the end of the game, otherwise winner (or tie) - Alex- Finished
 
 Edit print function for board stored as 8 lists of 8 characters - Alex - Finished
