@@ -5,7 +5,7 @@
 
 (defun printBoard (board)
 	(format t "  ~D ~D ~D ~D ~D ~D ~D ~D~%" 1 2 3 4 5 6 7 8)
-	
+
 	(do ((y 1 (1+ y))) ((> y 8) 'T)
 		(format t "~D " y)
 		(do ((x 1 (1+ x))) ((> x 8) 'T)
@@ -16,14 +16,34 @@
 )
 
 (defun getValue (board x y)
-	(nth  (1- x) (nth (1- y) board))
+	"Get the value of an x, y coordinate on the given board"
+	(cond
+		((and (> x 0) (> y 0)) (nth  (1- x) (nth (1- y) board)))
+		(T NIL)
+	)
+)
+
+(defun setValue (board x y val)
+	"Set the value of an x, y coordinate on the given board"
+	(let ((newBoard (deepCopy board)))
+		(setf (nth  (1- x) (nth (1- y) newBoard)) val)
+		newBoard
+	)
+)
+
+(defun deepCopy (board)
+	(let ((newBoard))
+		(do ((y 0 (1+ y))) ((>= y 8) newBoard)
+			(setf newBoard (append newBoard (list (copy-list (nth y board)))))
+		)
+	)
 )
 
 (defun generateSuccessors (board color)
 	(let ((openPos) (x) (y))
 		(do ((y 1 (1+ y))) ((> y 8) 'T)
 			(do ((x 1 (1+ x))) ((> x 8) 'T)
-				(if (and (equalp (getValue board x y) '-) (validMove board color x y) ) 
+				(if (and (equalp (getValue board x y) '-) (validMove board color x y) )
 					(setf openPos (append openPos (list (make-point :x x :y y))))
 				)
 			)
@@ -32,15 +52,97 @@
 	)
 )
 
-(defun validMove (board color x y)
-	T
+(defun generateSuccessorsNEW (board color)
+	(let ((x) (y) (successors))
+		(do ((y 1 (1+ y))) ((> y 8) 'T)
+			(do ((x 1 (1+ x))) ((> x 8) 'T)
+				(when (validMove board color x y)
+					(setf successors (append successors (list (setValue board x y color))))
+				)
+			)
+		)
+		successors
+	)
+)
+
+(defun gameOver (board)
+	(let ((black 0) (white 0))
+		(cond
+			((and (null (generateSuccessors board 'W)) (null (generateSuccessors board 'B)))
+				(do ((y 1 (1+ y))) ((> y 8) 'T)
+					(do ((x 1 (1+ x))) ((> x 8) 'T)
+						(if (equal (getValue board x y) 'W) (setf white (1+ white)))
+						(if (equal (getValue board x y) 'B) (setf black (1+ black)))
+					)
+				)
+				(cond
+					((> black white) 'B)
+					((> white black) 'W)
+					(T 'TIE)
+				)
+			)
+			(T NIL)
+		)
+	)
+)
+
+(defun validMove (board player x y)
+	"Determines if a certain x, y, position is a legal move for the given color"
+	(cond
+		((equalp (getValue board x y) '-)
+			(or
+				(testDirection board player x y #'left #'none)
+				(testDirection board player x y #'right #'none)
+				(testDirection board player x y #'none #'up)
+				(testDirection board player x y #'none #'down)
+				(testDirection board player x y #'left #'up)
+				(testDirection board player x y #'left #'down)
+				(testDirection board player x y #'right #'up)
+				(testDirection board player x y #'right #'down)
+			)
+		)
+		(T
+			NIL
+		)
+	)
+)
+
+(defun left (x) (1- x))
+(defun right (x) (1+ x))
+(defun down (y) (1- y))
+(defun up (y) (1+ y))
+(defun none (z) z)
+
+(defun testDirection (board player x y xMove yMove)
+	(let ((opponentExists NIL) (leaveLoop NIL) (retVal NIL) (val NIL))
+		(do () (leaveLoop retVal)
+			(setf x (funcall xMove x))
+			(setf y (funcall yMove y))
+			(setf val (getValue board x y))
+			(cond
+				((equal val player)
+					(if opponentExists (setf retVal T))
+					(setf leaveLoop T)
+				)
+				((equal val '-)
+					(setf leaveLoop T)
+				)
+				((equal val NIL)
+					(setf leaveLoop T)
+				)
+				(T
+					(setf opponentExists T)
+				)
+			)
+		)
+	)
 )
 
 (setf start '((- - - - - - - -)
-	(- - - - - - - -)
-	(- - - - - - - -)
-	(- - - W B - - -)
-	(- - - B W - - -)
-	(- - - - - - - -)
-	(- - - - - - - -)
-(- - - - - - - -)))
+			  (- - - - - - - -)
+			  (- - - - - - - -)
+			  (- - - W B - - -)
+			  (- - - B W - - -)
+			  (- - - - - - - -)
+			  (- - - - - - - -)
+			  (- - - - - - - -)))
