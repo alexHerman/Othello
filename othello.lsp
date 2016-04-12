@@ -1,7 +1,20 @@
-;(load 'minimax)
-(load (merge-pathnames "minimax.lsp" *load-truename*))
-
 (defstruct point x y)
+
+(defun deepenough (depth)
+	(<= depth 0)
+)
+
+(defun static (position)
+	(let ((black 0) (white 0))
+		(do ((y 1 (1+ y))) ((> y 8) 'T)
+			(do ((x 1 (1+ x))) ((> x 8) 'T)
+				(if (equal (getValue position x y) 'B) (setf black (1+ black)))
+				(if (equal (getValue position x y) 'W) (setf white (1+ white)))
+			)
+		)
+		(- black white)
+	)
+)
 
 (defun printBoard (board)
 	"Prints the board to the string with column and row numbers"
@@ -14,30 +27,28 @@
 		)
 		(format t "~%")
 	)
+	(format t "~%")
+)
+
+(defun printBoardList (lst)
+	(dolist (board lst)
+		(printBoard board)
+	)
 )
 
 (defun getValue (board x y)
 	"Get the value of an x, y coordinate on the given board"
 	(cond
-		((and (> x 0) (> y 0)) (nth  (1- x) (nth (1- y) board)))
+		((and (> x 0) (> y 0) (< x 9) (< y 9)) (nth (+ (* (1- y) 8) (1- x)) board))
 		(T NIL)
 	)
 )
 
 (defun setValue (board x y val)
 	"Set the value of an x, y coordinate on the given board"
-	(let ((newBoard (deepCopy board)))
-		(setf (nth  (1- x) (nth (1- y) newBoard)) val)
+	(let ((newBoard (copy-list board)))
+		(setf (nth (+ (* (1- y) 8) (1- x)) newBoard) val)
 		newBoard
-	)
-)
-
-(defun deepCopy (board)
-	"Create a copy of a board"
-	(let ((newBoard))
-		(do ((y 0 (1+ y))) ((>= y 8) newBoard)
-			(setf newBoard (append newBoard (list (copy-list (nth y board)))))
-		)
 	)
 )
 
@@ -55,11 +66,12 @@
 )
 
 (defun generateSuccessorsNEW (board color)
-	(let ((x) (y) (successors))
+	(let ((x) (y) (successors) (newBoard))
 		(do ((y 1 (1+ y))) ((> y 8) 'T)
 			(do ((x 1 (1+ x))) ((> x 8) 'T)
-				(when (validMove board color x y)
-					(setf successors (append successors (list (setValue board x y color))))
+				(setf newBoard (validMove board color x y))
+				(when newBoard
+					(setf successors (append successors (list newBoard)))
 				)
 			)
 		)
@@ -93,53 +105,69 @@
 	)
 )
 
-(defun validMove (board player x y)
+(defun validMove (newboard player x y)
 	"Determines if a certain x, y, position is a legal move for the given color"
-	(cond
-		; If the position does not already contain a piece
-		((equalp (getValue board x y) '-)
-			; Test every direction to find if this is a valid move
-			(or
-				(testDirection board player x y #'1- #'eval)
-				(testDirection board player x y #'1+ #'eval)
-				(testDirection board player x y #'eval #'1+)
-				(testDirection board player x y #'eval #'1-)
-				(testDirection board player x y #'1- #'1+)
-				(testDirection board player x y #'1- #'1-)
-				(testDirection board player x y #'1+ #'1+)
-				(testDirection board player x y #'1+ #'1-)
+	(let ((temp) (isValid nil))
+		(cond
+			; If the position does not already contain a piece
+			((equalp (getValue newboard x y) '-)
+				; Test every direction to find if this is a valid move
+				(setf temp (testDirection newboard player x y #'1- #'eval))
+				(when temp (setf isValid T) (setf newBoard temp))
+				(setf temp (testDirection newboard player x y #'1+ #'eval))
+				(when temp (setf isValid T) (setf newBoard temp))
+				(setf temp (testDirection newboard player x y #'eval #'1-))
+				(when temp (setf isValid T) (setf newBoard temp))
+				(setf temp (testDirection newboard player x y #'eval #'1+))
+				(when temp (setf isValid T) (setf newBoard temp))
+				(setf temp (testDirection newboard player x y #'1- #'1+))
+				(when temp (setf isValid T) (setf newBoard temp))
+				(setf temp (testDirection newboard player x y #'1- #'1-))
+				(when temp (setf isValid T) (setf newBoard temp))
+				(setf temp (testDirection newboard player x y #'1+ #'1+))
+				(when temp (setf isValid T) (setf newBoard temp))
+				(setf temp (testDirection newboard player x y #'1+ #'1-))
+				(when temp (setf isValid T) (setf newBoard temp))
+				(if isValid newBoard)
 			)
+			; NIL if the position is already filled
+			(T NIL)
 		)
-		; NIL if the position is already filled
-		(T NIL)
 	)
 )
 
-(defun testDirection (board player x y xMove yMove)
+(defun testDirection (newBoard player x y xMove yMove)
 	"Find if the new move captures any opponent pieces in a certain direction"
-	(let ((opponentEncountered NIL) (leaveLoop NIL) (retVal NIL) (val NIL))
-		(do () (leaveLoop retVal)
+	(let ((opponentEncountered NIL) (leaveLoop NIL) (val NIL) (board (setValue newBoard x y player)))
+		(do () (leaveLoop board)
 			(setf x (funcall xMove x))
 			(setf y (funcall yMove y))
 			(setf val (getValue board x y))
 			(cond
 				((equal val player)
-					(if opponentEncountered (setf retVal T))
+					(if (null opponentEncountered) (setf board NIL))
 					(setf leaveLoop T)
 				)
-				((equal val '-) (setf leaveLoop T))
-				((equal val NIL) (setf leaveLoop T))
-				(T (setf opponentEncountered T))
+				((or (equal val '-) (equal val NIL)) (setf board NIL) (setf leaveLoop T))
+				(T (setf opponentEncountered T) (setf board (setValue board x y player)))
 			)
 		)
 	)
 )
 
-(setf start '((- - - - - - - -)
-			  (- - - - - - - -)
-			  (- - - - - - - -)
-			  (- - - W B - - -)
-			  (- - - B W - - -)
-			  (- - - - - - - -)
-			  (- - - - - - - -)
-			  (- - - - - - - -)))
+(setf error '(- - - - - - - -
+			  - - - - - - - -
+			  - - - - - - - -
+			  - - - - W W B -
+			  - - - W W - - -
+			  - - - W - - - -
+			  - - - B - - - -
+			  - - - - - - - -))
+(setf start '(- - - - - - - -
+			  - - - - - - - -
+			  - - - - - - - -
+			  - - - W B - - -
+			  - - - B W - - -
+			  - - - - - - - -
+			  - - - - - - - -
+			  - - - - - - - -))
