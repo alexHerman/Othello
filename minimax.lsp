@@ -29,7 +29,8 @@ Functions called:
 
           Note: these functions may need additional arguments.
 |#
-(load 'othello)
+;(load 'othello)
+(load (merge-pathnames "othello.lsp" *load-truename*))
 
 (defun test ()
 	(printBoard (car (cadr (minimax start 4 'B))))
