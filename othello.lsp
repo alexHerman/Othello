@@ -4,7 +4,7 @@
 	(<= depth 0)
 )
 
-(defun static (position)
+(defun static (position player)
 	(let ((black 0) (white 0))
 		(do ((y 1 (1+ y))) ((> y 8) 'T)
 			(do ((x 1 (1+ x))) ((> x 8) 'T)
@@ -12,7 +12,9 @@
 				(if (equal (getValue position x y) 'W) (setf white (1+ white)))
 			)
 		)
-		(- black white)
+		(if(equalp player 'B)
+		(- black white)(- white black))
+		
 	)
 )
 
@@ -171,3 +173,20 @@
 			  - - - - - - - -
 			  - - - - - - - -
 			  - - - - - - - -))
+				
+				(setf test1 '(- - - - - - - -
+			  - - - - - - - -
+			  - - - - - - - -
+			  - - - W B - - -
+			  - - - W W W W -
+			  - - - W - - - -
+			  - - - - - - - -
+			  - - - - - - - -))
+				(setf test2 '(- - B B - - - -
+			  - - - B W B - -
+			  - W B B W W W B
+			  B B W W W B W W
+			  B W W W B B B W
+			  B W - W W - W B
+			  - - - W B - - -
+			  - - - - B - - -))

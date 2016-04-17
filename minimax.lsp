@@ -1,5 +1,5 @@
 #|
-                  ***** MINIMAX.LSP *****
+***** MINIMAX.LSP *****
 
 Generalized recursive minimax routine.
 
@@ -8,95 +8,189 @@ Class:	SDSM&T CSC447/547 Artificial Intelligence
 Date: 	Spring 2016
 
 Usage:    (minimax position depth)
-          where position is the position to be evaluated,
-          and depth is the search depth (number of plys).
+where position is the position to be evaluated,
+and depth is the search depth (number of plys).
 
 Returns:  (value path)
-          where value is the backed-up value from evaluation of leaf nodes,
-          and path is the path to the desired leaf node.
+where value is the backed-up value from evaluation of leaf nodes,
+and path is the path to the desired leaf node.
 
 Functions called:
 
-          (deepenough depth) -
-              predicate that returns T if the current position has reached
-              the desired search depth, NIL otherwise.
+(deepenough depth) -
+predicate that returns T if the current position has reached
+the desired search depth, NIL otherwise.
 
-          (move-generator position) -
-              generates successors to the position.
+(move-generator position) -
+generates successors to the position.
 
-          (static position) -
-              applies the static evaluation function to the position.
+(static position) -
+applies the static evaluation function to the position.
 
-          Note: these functions may need additional arguments.
+Note: these functions may need additional arguments.
 |#
 ;(load 'othello)
 (load (merge-pathnames "othello.lsp" *load-truename*))
+
+(test-minimax test1 2 'B "othello_test1.txt")
+(test-minimax test2 2 'B "othello_test2.txt")
 
 (defun test ()
 	(printBoard (car (cadr (minimax start 4 'B))))
 )
 
-(defun minimax (position depth player)
-    ; if we have searched deep enough, or there are no successors,
-    ; return position evaluation and nil for the path
-    (if (or (deepenough depth) (gameOver position))
-        (list (static position) (list position))
-
-    ; otherwise, generate successors and run minimax recursively
-	    (let
-	        (
-	            ; generate list of sucessor positions
-	            (successors (generateSuccessorsNEW position player))
-
-	            ; initialize current best path to nil
-	            (best-path nil)
-
-	            ; initialize current best score to negative infinity
-	            (best-score -1000000)
-
-				(turn player)
-
-	            ; other local variables
-	            succ-value
-	            succ-score
-	        )
-			(if (equal turn 'W) (setf turn 'B) (setf turn 'W))
-
-	        ; explore possible moves by looping through successor positions
-			(cond
-				(successors
-			        (dolist (successor successors)
-
-			            ; perform recursive DFS exploration of game tree
-			            (setq succ-value (minimax successor (1- depth) turn))
-
-			            ; change sign every ply to reflect alternating selection
-			            ; of MAX/MIN player (maximum/minimum value)
-			            (setq succ-score (- (car succ-value)))
-
-			            ; update best value and path if a better move is found
-			            ; (note that path is being stored in reverse order)
-			            (when (> succ-score best-score)
-			                  (setq best-score succ-score)
-							  (setq best-path (append (list successor) (cadr succ-value)))
-			                  ; (setq best-path (cons successor (cdr succ-value)))
-			            )
-			        )
-			        (list best-score best-path)
-				)
-				(T (list (static position) (list position)))
-			)
-
-	        ; return (value path) list when done
-	    )
+(defun test-minimax (position depth player filename)
+	;Because the output got too long for a command prompt...
+	(with-open-file (*standard-output* (merge-pathnames filename *load-truename*) :direction :output :if-exists :supersede)
+		(setf beta -1000)
+		(minimax-witprinting position depth player)
 	)
 )
 
+(setf beta -1000)
+
+(defun minimax-withprinting (position depth player)
+	; if we have searched deep enough, or there are no successors,
+	; return position evaluation and nil for the path
+	(if (or (deepenough depth) (gameOver position))
+		(list (static position player) (list position))
+		
+    ; otherwise, generate successors and run minimax recursively
+		(let
+			(
+				; generate list of sucessor positions
+				(successors (generateSuccessorsNEW position player))
+				
+				; initialize current best path to nil
+				(best-path nil)
+				
+				; initialize current best score to negative infinity
+				(best-score -1000000)
+				
+				(turn player)
+				
+				; other local variables
+				successor-value
+				successor-score
+			)
+			(format t "Depth: ~D Player: ~A ~%" depth player)
+			(PrintBoard position)
+			(if (equal turn 'W) (setf turn 'B) (setf turn 'W))
+			
+			; explore possible moves by looping through successor positions
+			(cond
+				(successors
+					(dolist (successor successors)
+						
+						; perform recursive DFS exploration of game tree
+						(setq successor-value (minimax successor (1- depth) turn))
+						
+						
+						; change sign every ply to reflect alternating selection
+						; of MAX/MIN player (maximum/minimum value)
+						(setq successor-score (- (car successor-value)))
+						
+						; update best value and path if a better move is found
+						; (note that path is being stored in reverse order)
+						(when (> successor-score best-score)
+							(setq best-score successor-score)
+							(setq best-path (append (list successor) (cadr successor-value)))
+							; (setq best-path (cons successor (cdr successor-value)))
+						)
+						
+						(format t "Depth: ~D Player: ~A Successor Score: ~D Best Score: ~D Beta: ~D~%"(1- depth) turn successor-score best-score beta)
+						(PrintBoard successor)
+						(when (< (- successor-score) beta)
+							(format t "Pruned branch.~%")
+							(return)
+						)
+						(when (= depth 2) 
+						(setf beta best-score))
+					)
+					(list best-score best-path)
+					
+				)
+				(T (list (static position player) (list position)))
+			)
+			
+			
+			; return (value path) list when done
+		)
+	)
+	
+)
+
+
+
+(defun minimax (position depth player)
+	; if we have searched deep enough, or there are no successors,
+	; return position evaluation and nil for the path
+	(if (or (deepenough depth) (gameOver position))
+		(list (static position player) (list position))
+		
+    ; otherwise, generate successors and run minimax recursively
+		(let
+			(
+				; generate list of sucessor positions
+				(successors (generateSuccessorsNEW position player))
+				
+				; initialize current best path to nil
+				(best-path nil)
+				
+				; initialize current best score to negative infinity
+				(best-score -1000000)
+				
+				(turn player)
+				
+				; other local variables
+				successor-value
+				successor-score
+			)
+			(if (equal turn 'W) (setf turn 'B) (setf turn 'W))
+			
+			; explore possible moves by looping through successor positions
+			(cond
+				(successors
+					(dolist (successor successors)
+						
+						; perform recursive DFS exploration of game tree
+						(setq successor-value (minimax successor (1- depth) turn))
+						
+						
+						; change sign every ply to reflect alternating selection
+						; of MAX/MIN player (maximum/minimum value)
+						(setq successor-score (- (car successor-value)))
+						
+						; update best value and path if a better move is found
+						; (note that path is being stored in reverse order)
+						(when (> successor-score best-score)
+							(setq best-score successor-score)
+							(setq best-path (append (list successor) (cadr successor-value)))
+							; (setq best-path (cons successor (cdr successor-value)))
+						)
+						(when (< (- successor-score) beta)
+							(return)
+						)
+						(when (= depth 2) 
+						(setf beta best-score))
+					)
+					(list best-score best-path)
+					
+				)
+				(T (list (static position player) (list position)))
+			)
+		)
+	)
+	
+)
+
 (defun testAI ()
+	
 	(let ((current start) (turn 'B) (test))
 		(printBoard current)
 		(do () ((gameOver current) (gameOver current))
 			(if (equal turn 'W) (setf turn 'B) (setf turn 'W))
+			(setf beta -1000)
 			(setf test (minimax current 5 turn))
 			(setf current (car (cadr test)))
 			(printBoard current)
@@ -111,7 +205,7 @@ Functions called:
 		(if (equal playerColor 'W) (setf turn 'B) (setf turn 'W))
 		(setf current error)
 		(printBoard current)
-
+		
 		(cond
 			((equal playerColor 'B)
 				(do () ((gameOver current) (gameOver current))
@@ -125,6 +219,7 @@ Functions called:
 					)
 					(printBoard current)
 					(when (null (gameOver current))
+						(setf beta -1000)
 						(setf path (minimax current 3 turn))
 						(setf current (car (cadr path)))
 					)
@@ -133,6 +228,7 @@ Functions called:
 			)
 			(T
 				(do () ((gameOver current) (gameOver current))
+					(setf beta -1000)
 					(setf path (minimax current 3 turn))
 					(setf current (car (cadr path)))
 					(printBoard current)

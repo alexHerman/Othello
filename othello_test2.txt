@@ -1,0 +1,976 @@
+Depth: 2 Player: B 
+  1 2 3 4 5 6 7 8
+1 - - B B - - - - 
+2 - - - B W B - - 
+3 - W B B W W W B 
+4 B B W W W B W W 
+5 B W W W B B B W 
+6 B W - W W - W B 
+7 - - - W B - - - 
+8 - - - - B - - - 
+
+Depth: 1 Player: W 
+  1 2 3 4 5 6 7 8
+1 - - B B B - - - 
+2 - - - B B B - - 
+3 - W B B B W W B 
+4 B B W W B B W W 
+5 B W W W B B B W 
+6 B W - W W - W B 
+7 - - - W B - - - 
+8 - - - - B - - - 
+
+Depth: 0 Player: B Successor Score: 1 Best Score: 1 Beta: -1000
+  1 2 3 4 5 6 7 8
+1 - - B B B W - - 
+2 - - - B W W - - 
+3 - W B W B W W B 
+4 B B W W B B W W 
+5 B W W W B B B W 
+6 B W - W W - W B 
+7 - - - W B - - - 
+8 - - - - B - - - 
+
+Depth: 0 Player: B Successor Score: -1 Best Score: 1 Beta: -1000
+  1 2 3 4 5 6 7 8
+1 - - B B B - W - 
+2 - - - B B W - - 
+3 - W B B W W W B 
+4 B B W W B B W W 
+5 B W W W B B B W 
+6 B W - W W - W B 
+7 - - - W B - - - 
+8 - - - - B - - - 
+
+Depth: 0 Player: B Successor Score: -3 Best Score: 1 Beta: -1000
+  1 2 3 4 5 6 7 8
+1 - - B B B - - - 
+2 - W - B B B - - 
+3 - W W B B W W B 
+4 B B W W B B W W 
+5 B W W W B B B W 
+6 B W - W W - W B 
+7 - - - W B - - - 
+8 - - - - B - - - 
+
+Depth: 0 Player: B Successor Score: 3 Best Score: 3 Beta: -1000
+  1 2 3 4 5 6 7 8
+1 - - B B B - - - 
+2 - - W B B B - - 
+3 - W W W B W W B 
+4 B B W W W B W W 
+5 B W W W B W B W 
+6 B W - W W - W B 
+7 - - - W B - - - 
+8 - - - - B - - - 
+
+Depth: 0 Player: B Successor Score: -3 Best Score: 3 Beta: -1000
+  1 2 3 4 5 6 7 8
+1 - - B B B - - - 
+2 - - - B B B - W 
+3 - W B B B W W W 
+4 B B W W B B W W 
+5 B W W W B B B W 
+6 B W - W W - W B 
+7 - - - W B - - - 
+8 - - - - B - - - 
+
+Depth: 0 Player: B Successor Score: -3 Best Score: 3 Beta: -1000
+  1 2 3 4 5 6 7 8
+1 - - B B B - - - 
+2 - - - B B B - - 
+3 W W B B B W W B 
+4 B W W W B B W W 
+5 B W W W B B B W 
+6 B W - W W - W B 
+7 - - - W B - - - 
+8 - - - - B - - - 
+
+Depth: 0 Player: B Successor Score: 3 Best Score: 3 Beta: -1000
+  1 2 3 4 5 6 7 8
+1 - - B B B - - - 
+2 - - - B B B - - 
+3 - W B B B W W B 
+4 B B W W B W W W 
+5 B W W W W W W W 
+6 B W - W W W W B 
+7 - - - W B - - - 
+8 - - - - B - - - 
+
+Depth: 0 Player: B Successor Score: -3 Best Score: 3 Beta: -1000
+  1 2 3 4 5 6 7 8
+1 - - B B B - - - 
+2 - - - B B B - - 
+3 - W B B B W W B 
+4 B B W W B B W W 
+5 B W W W B B B W 
+6 B W - W W - W B 
+7 - - - W W W - - 
+8 - - - - B - - - 
+
+Depth: 0 Player: B Successor Score: -3 Best Score: 3 Beta: -1000
+  1 2 3 4 5 6 7 8
+1 - - B B B - - - 
+2 - - - B B B - - 
+3 - W B B B W W B 
+4 B B W W B B W W 
+5 B W W W B B B W 
+6 B W - W W - W W 
+7 - - - W B - - W 
+8 - - - - B - - - 
+
+Depth: 0 Player: B Successor Score: -3 Best Score: 3 Beta: -1000
+  1 2 3 4 5 6 7 8
+1 - - B B B - - - 
+2 - - - B B B - - 
+3 - W B B B W W B 
+4 B B W W B B W W 
+5 B W W W B B B W 
+6 B W - W W - W B 
+7 - - - W W - - - 
+8 - - - - B W - - 
+
+Depth: 1 Player: W Successor Score: -3 Best Score: -3 Beta: -1000
+  1 2 3 4 5 6 7 8
+1 - - B B B - - - 
+2 - - - B B B - - 
+3 - W B B B W W B 
+4 B B W W B B W W 
+5 B W W W B B B W 
+6 B W - W W - W B 
+7 - - - W B - - - 
+8 - - - - B - - - 
+
+Depth: 1 Player: W 
+  1 2 3 4 5 6 7 8
+1 - - B B - B - - 
+2 - - - B B B - - 
+3 - W B B W W W B 
+4 B B W W W B W W 
+5 B W W W B B B W 
+6 B W - W W - W B 
+7 - - - W B - - - 
+8 - - - - B - - - 
+
+Depth: 0 Player: B Successor Score: 3 Best Score: 3 Beta: -3
+  1 2 3 4 5 6 7 8
+1 - - B B W B - - 
+2 - - - B W W - - 
+3 - W B B W W W B 
+4 B B W W W B W W 
+5 B W W W B B B W 
+6 B W - W W - W B 
+7 - - - W B - - - 
+8 - - - - B - - - 
+
+Depth: 0 Player: B Successor Score: 1 Best Score: 3 Beta: -3
+  1 2 3 4 5 6 7 8
+1 - - B B - B W - 
+2 - - - B B W - - 
+3 - W B B W W W B 
+4 B B W W W B W W 
+5 B W W W B B B W 
+6 B W - W W - W B 
+7 - - - W B - - - 
+8 - - - - B - - - 
+
+Depth: 0 Player: B Successor Score: 1 Best Score: 3 Beta: -3
+  1 2 3 4 5 6 7 8
+1 - - B B - B - - 
+2 - W - B B B - - 
+3 - W W B W W W B 
+4 B B W W W B W W 
+5 B W W W B B B W 
+6 B W - W W - W B 
+7 - - - W B - - - 
+8 - - - - B - - - 
+
+Depth: 0 Player: B Successor Score: 3 Best Score: 3 Beta: -3
+  1 2 3 4 5 6 7 8
+1 - - B B - B - - 
+2 - - W B B B - - 
+3 - W W W W W W B 
+4 B B W W W B W W 
+5 B W W W B B B W 
+6 B W - W W - W B 
+7 - - - W B - - - 
+8 - - - - B - - - 
+
+Depth: 0 Player: B Successor Score: 1 Best Score: 3 Beta: -3
+  1 2 3 4 5 6 7 8
+1 - - B B - B - - 
+2 - - - B B B - W 
+3 - W B B W W W W 
+4 B B W W W B W W 
+5 B W W W B B B W 
+6 B W - W W - W B 
+7 - - - W B - - - 
+8 - - - - B - - - 
+
+Depth: 0 Player: B Successor Score: 1 Best Score: 3 Beta: -3
+  1 2 3 4 5 6 7 8
+1 - - B B - B - - 
+2 - - - B B B - - 
+3 W W B B W W W B 
+4 B W W W W B W W 
+5 B W W W B B B W 
+6 B W - W W - W B 
+7 - - - W B - - - 
+8 - - - - B - - - 
+
+Depth: 0 Player: B Successor Score: 7 Best Score: 7 Beta: -3
+  1 2 3 4 5 6 7 8
+1 - - B B - B - - 
+2 - - - B B B - - 
+3 - W B B W W W B 
+4 B B W W W W W W 
+5 B W W W W W W W 
+6 B W - W W W W B 
+7 - - - W B - - - 
+8 - - - - B - - - 
+
+Pruned branch.
+Depth: 1 Player: W Successor Score: -7 Best Score: -3 Beta: -3
+  1 2 3 4 5 6 7 8
+1 - - B B - B - - 
+2 - - - B B B - - 
+3 - W B B W W W B 
+4 B B W W W B W W 
+5 B W W W B B B W 
+6 B W - W W - W B 
+7 - - - W B - - - 
+8 - - - - B - - - 
+
+Depth: 1 Player: W 
+  1 2 3 4 5 6 7 8
+1 - - B B - - - - 
+2 - B - B W B - - 
+3 - B B B W W W B 
+4 B B W W W B W W 
+5 B W W W B B B W 
+6 B W - W W - W B 
+7 - - - W B - - - 
+8 - - - - B - - - 
+
+Depth: 0 Player: B Successor Score: 3 Best Score: 3 Beta: -3
+  1 2 3 4 5 6 7 8
+1 W - B B - - - - 
+2 - W - B W B - - 
+3 - B W B W W W B 
+4 B B W W W B W W 
+5 B W W W B B B W 
+6 B W - W W - W B 
+7 - - - W B - - - 
+8 - - - - B - - - 
+
+Depth: 0 Player: B Successor Score: 5 Best Score: 5 Beta: -3
+  1 2 3 4 5 6 7 8
+1 - W B B - - - - 
+2 - W - B W B - - 
+3 - W B B W W W B 
+4 B W W W W B W W 
+5 B W W W B B B W 
+6 B W - W W - W B 
+7 - - - W B - - - 
+8 - - - - B - - - 
+
+Pruned branch.
+Depth: 1 Player: W Successor Score: -5 Best Score: -3 Beta: -3
+  1 2 3 4 5 6 7 8
+1 - - B B - - - - 
+2 - B - B W B - - 
+3 - B B B W W W B 
+4 B B W W W B W W 
+5 B W W W B B B W 
+6 B W - W W - W B 
+7 - - - W B - - - 
+8 - - - - B - - - 
+
+Depth: 1 Player: W 
+  1 2 3 4 5 6 7 8
+1 - - B B - - - - 
+2 - - B B W B - - 
+3 - B B B W W W B 
+4 B B W W W B W W 
+5 B W W W B B B W 
+6 B W - W W - W B 
+7 - - - W B - - - 
+8 - - - - B - - - 
+
+Depth: 0 Player: B Successor Score: 3 Best Score: 3 Beta: -3
+  1 2 3 4 5 6 7 8
+1 - W B B - - - - 
+2 - - W B W B - - 
+3 - B B W W W W B 
+4 B B W W W B W W 
+5 B W W W B B B W 
+6 B W - W W - W B 
+7 - - - W B - - - 
+8 - - - - B - - - 
+
+Depth: 0 Player: B Successor Score: 1 Best Score: 3 Beta: -3
+  1 2 3 4 5 6 7 8
+1 - - B B W - - - 
+2 - - B B W W - - 
+3 - B B B W W W B 
+4 B B W W W B W W 
+5 B W W W B B B W 
+6 B W - W W - W B 
+7 - - - W B - - - 
+8 - - - - B - - - 
+
+Depth: 0 Player: B Successor Score: 1 Best Score: 3 Beta: -3
+  1 2 3 4 5 6 7 8
+1 - - B B - W - - 
+2 - - B B W W - - 
+3 - B B B W W W B 
+4 B B W W W B W W 
+5 B W W W B B B W 
+6 B W - W W - W B 
+7 - - - W B - - - 
+8 - - - - B - - - 
+
+Depth: 0 Player: B Successor Score: 1 Best Score: 3 Beta: -3
+  1 2 3 4 5 6 7 8
+1 - - B B - - W - 
+2 - - B B W W - - 
+3 - B B B W W W B 
+4 B B W W W B W W 
+5 B W W W B B B W 
+6 B W - W W - W B 
+7 - - - W B - - - 
+8 - - - - B - - - 
+
+Depth: 0 Player: B Successor Score: 1 Best Score: 3 Beta: -3
+  1 2 3 4 5 6 7 8
+1 - - B B - - - - 
+2 W - B B W B - - 
+3 - W B B W W W B 
+4 B B W W W B W W 
+5 B W W W B B B W 
+6 B W - W W - W B 
+7 - - - W B - - - 
+8 - - - - B - - - 
+
+Depth: 0 Player: B Successor Score: 9 Best Score: 9 Beta: -3
+  1 2 3 4 5 6 7 8
+1 - - B B - - - - 
+2 - W W W W B - - 
+3 - W W B W W W B 
+4 B W W W W B W W 
+5 B W W W B B B W 
+6 B W - W W - W B 
+7 - - - W B - - - 
+8 - - - - B - - - 
+
+Pruned branch.
+Depth: 1 Player: W Successor Score: -9 Best Score: -3 Beta: -3
+  1 2 3 4 5 6 7 8
+1 - - B B - - - - 
+2 - - B B W B - - 
+3 - B B B W W W B 
+4 B B W W W B W W 
+5 B W W W B B B W 
+6 B W - W W - W B 
+7 - - - W B - - - 
+8 - - - - B - - - 
+
+Depth: 1 Player: W 
+  1 2 3 4 5 6 7 8
+1 - - B B - - - - 
+2 - - - B W B B - 
+3 - W B B W W B B 
+4 B B W W W B B W 
+5 B W W W B B B W 
+6 B W - W W - W B 
+7 - - - W B - - - 
+8 - - - - B - - - 
+
+Depth: 0 Player: B Successor Score: 1 Best Score: 1 Beta: -3
+  1 2 3 4 5 6 7 8
+1 - - B B W - - - 
+2 - - - B W W B - 
+3 - W B B W W W B 
+4 B B W W W B B W 
+5 B W W W B B B W 
+6 B W - W W - W B 
+7 - - - W B - - - 
+8 - - - - B - - - 
+
+Depth: 0 Player: B Successor Score: -1 Best Score: 1 Beta: -3
+  1 2 3 4 5 6 7 8
+1 - - B B - W - - 
+2 - - - B W W B - 
+3 - W B B W W B B 
+4 B B W W W B B W 
+5 B W W W B B B W 
+6 B W - W W - W B 
+7 - - - W B - - - 
+8 - - - - B - - - 
+
+Depth: 0 Player: B Successor Score: 7 Best Score: 7 Beta: -3
+  1 2 3 4 5 6 7 8
+1 - - B B - - W - 
+2 - - - B W W W - 
+3 - W B B W W W B 
+4 B B W W W B W W 
+5 B W W W B B W W 
+6 B W - W W - W B 
+7 - - - W B - - - 
+8 - - - - B - - - 
+
+Pruned branch.
+Depth: 1 Player: W Successor Score: -7 Best Score: -3 Beta: -3
+  1 2 3 4 5 6 7 8
+1 - - B B - - - - 
+2 - - - B W B B - 
+3 - W B B W W B B 
+4 B B W W W B B W 
+5 B W W W B B B W 
+6 B W - W W - W B 
+7 - - - W B - - - 
+8 - - - - B - - - 
+
+Depth: 1 Player: W 
+  1 2 3 4 5 6 7 8
+1 - - B B - - - - 
+2 - - - B W B - B 
+3 - W B B W W B B 
+4 B B W W W B W W 
+5 B W W W B B B W 
+6 B W - W W - W B 
+7 - - - W B - - - 
+8 - - - - B - - - 
+
+Depth: 0 Player: B Successor Score: 3 Best Score: 3 Beta: -3
+  1 2 3 4 5 6 7 8
+1 - - B B W - - - 
+2 - - - B W W - B 
+3 - W B B W W W B 
+4 B B W W W B W W 
+5 B W W W B B B W 
+6 B W - W W - W B 
+7 - - - W B - - - 
+8 - - - - B - - - 
+
+Depth: 0 Player: B Successor Score: 1 Best Score: 3 Beta: -3
+  1 2 3 4 5 6 7 8
+1 - - B B - W - - 
+2 - - - B W W - B 
+3 - W B B W W B B 
+4 B B W W W B W W 
+5 B W W W B B B W 
+6 B W - W W - W B 
+7 - - - W B - - - 
+8 - - - - B - - - 
+
+Depth: 0 Player: B Successor Score: 1 Best Score: 3 Beta: -3
+  1 2 3 4 5 6 7 8
+1 - - B B - - W - 
+2 - - - B W W - B 
+3 - W B B W W B B 
+4 B B W W W B W W 
+5 B W W W B B B W 
+6 B W - W W - W B 
+7 - - - W B - - - 
+8 - - - - B - - - 
+
+Depth: 0 Player: B Successor Score: 3 Best Score: 3 Beta: -3
+  1 2 3 4 5 6 7 8
+1 - - B B - - - W 
+2 - - - B W B - W 
+3 - W B B W W B W 
+4 B B W W W B W W 
+5 B W W W B B B W 
+6 B W - W W - W B 
+7 - - - W B - - - 
+8 - - - - B - - - 
+
+Depth: 0 Player: B Successor Score: 1 Best Score: 3 Beta: -3
+  1 2 3 4 5 6 7 8
+1 - - B B - - - - 
+2 - W - B W B - B 
+3 - W W B W W B B 
+4 B B W W W B W W 
+5 B W W W B B B W 
+6 B W - W W - W B 
+7 - - - W B - - - 
+8 - - - - B - - - 
+
+Depth: 0 Player: B Successor Score: 5 Best Score: 5 Beta: -3
+  1 2 3 4 5 6 7 8
+1 - - B B - - - - 
+2 - - W W W B - B 
+3 - W W W W W B B 
+4 B B W W W B W W 
+5 B W W W B B B W 
+6 B W - W W - W B 
+7 - - - W B - - - 
+8 - - - - B - - - 
+
+Pruned branch.
+Depth: 1 Player: W Successor Score: -5 Best Score: -3 Beta: -3
+  1 2 3 4 5 6 7 8
+1 - - B B - - - - 
+2 - - - B W B - B 
+3 - W B B W W B B 
+4 B B W W W B W W 
+5 B W W W B B B W 
+6 B W - W W - W B 
+7 - - - W B - - - 
+8 - - - - B - - - 
+
+Depth: 1 Player: W 
+  1 2 3 4 5 6 7 8
+1 - - B B - - - - 
+2 - - - B W B - - 
+3 B B B B W W W B 
+4 B B W W W B W W 
+5 B W W W B B B W 
+6 B W - W W - W B 
+7 - - - W B - - - 
+8 - - - - B - - - 
+
+Depth: 0 Player: B Successor Score: 1 Best Score: 1 Beta: -3
+  1 2 3 4 5 6 7 8
+1 - - B B W - - - 
+2 - - - B W W - - 
+3 B B B B W W W B 
+4 B B W W W B W W 
+5 B W W W B B B W 
+6 B W - W W - W B 
+7 - - - W B - - - 
+8 - - - - B - - - 
+
+Depth: 0 Player: B Successor Score: 1 Best Score: 1 Beta: -3
+  1 2 3 4 5 6 7 8
+1 - - B B - W - - 
+2 - - - B W W - - 
+3 B B B B W W W B 
+4 B B W W W B W W 
+5 B W W W B B B W 
+6 B W - W W - W B 
+7 - - - W B - - - 
+8 - - - - B - - - 
+
+Depth: 0 Player: B Successor Score: 1 Best Score: 1 Beta: -3
+  1 2 3 4 5 6 7 8
+1 - - B B - - W - 
+2 - - - B W W - - 
+3 B B B B W W W B 
+4 B B W W W B W W 
+5 B W W W B B B W 
+6 B W - W W - W B 
+7 - - - W B - - - 
+8 - - - - B - - - 
+
+Depth: 0 Player: B Successor Score: 1 Best Score: 1 Beta: -3
+  1 2 3 4 5 6 7 8
+1 - - B B - - - - 
+2 W - - B W B - - 
+3 B W B B W W W B 
+4 B B W W W B W W 
+5 B W W W B B B W 
+6 B W - W W - W B 
+7 - - - W B - - - 
+8 - - - - B - - - 
+
+Depth: 0 Player: B Successor Score: 5 Best Score: 5 Beta: -3
+  1 2 3 4 5 6 7 8
+1 - - B B - - - - 
+2 - W - B W B - - 
+3 B W W B W W W B 
+4 B W W W W B W W 
+5 B W W W B B B W 
+6 B W - W W - W B 
+7 - - - W B - - - 
+8 - - - - B - - - 
+
+Pruned branch.
+Depth: 1 Player: W Successor Score: -5 Best Score: -3 Beta: -3
+  1 2 3 4 5 6 7 8
+1 - - B B - - - - 
+2 - - - B W B - - 
+3 B B B B W W W B 
+4 B B W W W B W W 
+5 B W W W B B B W 
+6 B W - W W - W B 
+7 - - - W B - - - 
+8 - - - - B - - - 
+
+Depth: 1 Player: W 
+  1 2 3 4 5 6 7 8
+1 - - B B - - - - 
+2 - - - B W B - - 
+3 - W B B W W W B 
+4 B B B W W B W W 
+5 B B B W B B B W 
+6 B B B W W - W B 
+7 - - - B B - - - 
+8 - - - - B - - - 
+
+Depth: 0 Player: B Successor Score: -7 Best Score: -7 Beta: -3
+  1 2 3 4 5 6 7 8
+1 - - B B W - - - 
+2 - - - B W W - - 
+3 - W B B W W W B 
+4 B B B W W B W W 
+5 B B B W B B B W 
+6 B B B W W - W B 
+7 - - - B B - - - 
+8 - - - - B - - - 
+
+Depth: 0 Player: B Successor Score: -7 Best Score: -7 Beta: -3
+  1 2 3 4 5 6 7 8
+1 - - B B - W - - 
+2 - - - B W W - - 
+3 - W B B W W W B 
+4 B B B W W B W W 
+5 B B B W B B B W 
+6 B B B W W - W B 
+7 - - - B B - - - 
+8 - - - - B - - - 
+
+Depth: 0 Player: B Successor Score: -7 Best Score: -7 Beta: -3
+  1 2 3 4 5 6 7 8
+1 - - B B - - W - 
+2 - - - B W W - - 
+3 - W B B W W W B 
+4 B B B W W B W W 
+5 B B B W B B B W 
+6 B B B W W - W B 
+7 - - - B B - - - 
+8 - - - - B - - - 
+
+Depth: 0 Player: B Successor Score: -7 Best Score: -7 Beta: -3
+  1 2 3 4 5 6 7 8
+1 - - B B - - - - 
+2 - W - B W B - - 
+3 - W W B W W W B 
+4 B B B W W B W W 
+5 B B B W B B B W 
+6 B B B W W - W B 
+7 - - - B B - - - 
+8 - - - - B - - - 
+
+Depth: 0 Player: B Successor Score: -5 Best Score: -5 Beta: -3
+  1 2 3 4 5 6 7 8
+1 - - B B - - - - 
+2 - - W W W B - - 
+3 - W B W W W W B 
+4 B B B W W B W W 
+5 B B B W B B B W 
+6 B B B W W - W B 
+7 - - - B B - - - 
+8 - - - - B - - - 
+
+Depth: 0 Player: B Successor Score: -7 Best Score: -5 Beta: -3
+  1 2 3 4 5 6 7 8
+1 - - B B - - - - 
+2 - - - B W W W - 
+3 - W B B W W W B 
+4 B B B W W B W W 
+5 B B B W B B B W 
+6 B B B W W - W B 
+7 - - - B B - - - 
+8 - - - - B - - - 
+
+Depth: 0 Player: B Successor Score: -7 Best Score: -5 Beta: -3
+  1 2 3 4 5 6 7 8
+1 - - B B - - - - 
+2 - - - B W B - W 
+3 - W B B W W W W 
+4 B B B W W B W W 
+5 B B B W B B B W 
+6 B B B W W - W B 
+7 - - - B B - - - 
+8 - - - - B - - - 
+
+Depth: 0 Player: B Successor Score: -5 Best Score: -5 Beta: -3
+  1 2 3 4 5 6 7 8
+1 - - B B - - - - 
+2 - - - B W B - - 
+3 W W B B W W W B 
+4 B W B W W B W W 
+5 B B W W B B B W 
+6 B B B W W - W B 
+7 - - - B B - - - 
+8 - - - - B - - - 
+
+Depth: 0 Player: B Successor Score: -1 Best Score: -1 Beta: -3
+  1 2 3 4 5 6 7 8
+1 - - B B - - - - 
+2 - - - B W B - - 
+3 - W B B W W W B 
+4 B B B W W W W W 
+5 B B B W W W W W 
+6 B B B W W W W B 
+7 - - - B B - - - 
+8 - - - - B - - - 
+
+Depth: 0 Player: B Successor Score: -5 Best Score: -1 Beta: -3
+  1 2 3 4 5 6 7 8
+1 - - B B - - - - 
+2 - - - B W B - - 
+3 - W B B W W W B 
+4 B B B W W B W W 
+5 B B W W B B B W 
+6 B W B W W - W B 
+7 W - - B B - - - 
+8 - - - - B - - - 
+
+Depth: 0 Player: B Successor Score: -1 Best Score: -1 Beta: -3
+  1 2 3 4 5 6 7 8
+1 - - B B - - - - 
+2 - - - B W B - - 
+3 - W B B W W W B 
+4 B W B W W B W W 
+5 B W B W B B B W 
+6 B W W W W - W B 
+7 - W - B B - - - 
+8 - - - - B - - - 
+
+Depth: 0 Player: B Successor Score: -7 Best Score: -1 Beta: -3
+  1 2 3 4 5 6 7 8
+1 - - B B - - - - 
+2 - - - B W B - - 
+3 - W B B W W W B 
+4 B B B W W B W W 
+5 B B B W B B B W 
+6 B B B W W - W W 
+7 - - - B B - - W 
+8 - - - - B - - - 
+
+Depth: 0 Player: B Successor Score: -7 Best Score: -1 Beta: -3
+  1 2 3 4 5 6 7 8
+1 - - B B - - - - 
+2 - - - B W B - - 
+3 - W B B W W W B 
+4 B B B W W B W W 
+5 B B B W B B B W 
+6 B B B W W - W B 
+7 - - - W B - - - 
+8 - - W - B - - - 
+
+Depth: 0 Player: B Successor Score: -7 Best Score: -1 Beta: -3
+  1 2 3 4 5 6 7 8
+1 - - B B - - - - 
+2 - - - B W B - - 
+3 - W B B W W W B 
+4 B B B W W B W W 
+5 B B B W B B B W 
+6 B B B W W - W B 
+7 - - - W B - - - 
+8 - - - W B - - - 
+
+Depth: 0 Player: B Successor Score: -7 Best Score: -1 Beta: -3
+  1 2 3 4 5 6 7 8
+1 - - B B - - - - 
+2 - - - B W B - - 
+3 - W B B W W W B 
+4 B B B W W B W W 
+5 B B B W B B B W 
+6 B B B W W - W B 
+7 - - - B W - - - 
+8 - - - - B W - - 
+
+Depth: 1 Player: W Successor Score: 1 Best Score: 1 Beta: -3
+  1 2 3 4 5 6 7 8
+1 - - B B - - - - 
+2 - - - B W B - - 
+3 - W B B W W W B 
+4 B B B W W B W W 
+5 B B B W B B B W 
+6 B B B W W - W B 
+7 - - - B B - - - 
+8 - - - - B - - - 
+
+Depth: 1 Player: W 
+  1 2 3 4 5 6 7 8
+1 - - B B - - - - 
+2 - - - B W B - - 
+3 - W B B W W W B 
+4 B B W W W B W W 
+5 B W W W B B B W 
+6 B W - W W B B B 
+7 - - - W B - - - 
+8 - - - - B - - - 
+
+Depth: 0 Player: B Successor Score: 1 Best Score: 1 Beta: 1
+  1 2 3 4 5 6 7 8
+1 - - B B W - - - 
+2 - - - B W W - - 
+3 - W B B W W W B 
+4 B B W W W B W W 
+5 B W W W B B B W 
+6 B W - W W B B B 
+7 - - - W B - - - 
+8 - - - - B - - - 
+
+Pruned branch.
+Depth: 1 Player: W Successor Score: -1 Best Score: 1 Beta: 1
+  1 2 3 4 5 6 7 8
+1 - - B B - - - - 
+2 - - - B W B - - 
+3 - W B B W W W B 
+4 B B W W W B W W 
+5 B W W W B B B W 
+6 B W - W W B B B 
+7 - - - W B - - - 
+8 - - - - B - - - 
+
+Depth: 1 Player: W 
+  1 2 3 4 5 6 7 8
+1 - - B B - - - - 
+2 - - - B W B - - 
+3 - W B B B W W B 
+4 B B W B W B W W 
+5 B W B W B B B W 
+6 B B - W W - W B 
+7 B - - W B - - - 
+8 - - - - B - - - 
+
+Depth: 0 Player: B Successor Score: -5 Best Score: -5 Beta: 1
+  1 2 3 4 5 6 7 8
+1 - - B B W - - - 
+2 - - - B W W - - 
+3 - W B B B W W B 
+4 B B W B W B W W 
+5 B W B W B B B W 
+6 B B - W W - W B 
+7 B - - W B - - - 
+8 - - - - B - - - 
+
+Depth: 0 Player: B Successor Score: -5 Best Score: -5 Beta: 1
+  1 2 3 4 5 6 7 8
+1 - - B B - W - - 
+2 - - - B W W - - 
+3 - W B B B W W B 
+4 B B W B W B W W 
+5 B W B W B B B W 
+6 B B - W W - W B 
+7 B - - W B - - - 
+8 - - - - B - - - 
+
+Depth: 0 Player: B Successor Score: -1 Best Score: -1 Beta: 1
+  1 2 3 4 5 6 7 8
+1 - - B B - - - - 
+2 - - W W W B - - 
+3 - W W W B W W B 
+4 B B W B W B W W 
+5 B W B W B B B W 
+6 B B - W W - W B 
+7 B - - W B - - - 
+8 - - - - B - - - 
+
+Depth: 0 Player: B Successor Score: -5 Best Score: -1 Beta: 1
+  1 2 3 4 5 6 7 8
+1 - - B B - - - - 
+2 - - - B W W W - 
+3 - W B B B W W B 
+4 B B W B W B W W 
+5 B W B W B B B W 
+6 B B - W W - W B 
+7 B - - W B - - - 
+8 - - - - B - - - 
+
+Depth: 0 Player: B Successor Score: -5 Best Score: -1 Beta: 1
+  1 2 3 4 5 6 7 8
+1 - - B B - - - - 
+2 - - - B W B - W 
+3 - W B B B W W W 
+4 B B W B W B W W 
+5 B W B W B B B W 
+6 B B - W W - W B 
+7 B - - W B - - - 
+8 - - - - B - - - 
+
+Depth: 0 Player: B Successor Score: -3 Best Score: -1 Beta: 1
+  1 2 3 4 5 6 7 8
+1 - - B B - - - - 
+2 - - - B W B - - 
+3 W W B B B W W B 
+4 B W W B W B W W 
+5 B W W W B B B W 
+6 B B - W W - W B 
+7 B - - W B - - - 
+8 - - - - B - - - 
+
+Depth: 0 Player: B Successor Score: -5 Best Score: -1 Beta: 1
+  1 2 3 4 5 6 7 8
+1 - - B B - - - - 
+2 - - - B W B - - 
+3 - W B B B W W B 
+4 B B W B W B W W 
+5 B W W W B B B W 
+6 B B W W W - W B 
+7 B - - W B - - - 
+8 - - - - B - - - 
+
+Depth: 0 Player: B Successor Score: -1 Best Score: -1 Beta: 1
+  1 2 3 4 5 6 7 8
+1 - - B B - - - - 
+2 - - - B W B - - 
+3 - W B B B W W B 
+4 B B W B W W W W 
+5 B W B W B W W W 
+6 B B - W W W W B 
+7 B - - W B - - - 
+8 - - - - B - - - 
+
+Depth: 0 Player: B Successor Score: -5 Best Score: -1 Beta: 1
+  1 2 3 4 5 6 7 8
+1 - - B B - - - - 
+2 - - - B W B - - 
+3 - W B B B W W B 
+4 B B W B W B W W 
+5 B W B W B B B W 
+6 B W - W W - W B 
+7 B W - W B - - - 
+8 - - - - B - - - 
+
+Depth: 0 Player: B Successor Score: -5 Best Score: -1 Beta: 1
+  1 2 3 4 5 6 7 8
+1 - - B B - - - - 
+2 - - - B W B - - 
+3 - W B B B W W B 
+4 B B W B W B W W 
+5 B W B W B B B W 
+6 B B - W W - W B 
+7 B - - W W W - - 
+8 - - - - B - - - 
+
+Depth: 0 Player: B Successor Score: -5 Best Score: -1 Beta: 1
+  1 2 3 4 5 6 7 8
+1 - - B B - - - - 
+2 - - - B W B - - 
+3 - W B B B W W B 
+4 B B W B W B W W 
+5 B W B W B B B W 
+6 B B - W W - W W 
+7 B - - W B - - W 
+8 - - - - B - - - 
+
+Depth: 0 Player: B Successor Score: -5 Best Score: -1 Beta: 1
+  1 2 3 4 5 6 7 8
+1 - - B B - - - - 
+2 - - - B W B - - 
+3 - W B B B W W B 
+4 B B W B W B W W 
+5 B W B W B B B W 
+6 B B - W W - W B 
+7 B - - W W - - - 
+8 - - - - B W - - 
+
+Depth: 1 Player: W Successor Score: 1 Best Score: 1 Beta: 1
+  1 2 3 4 5 6 7 8
+1 - - B B - - - - 
+2 - - - B W B - - 
+3 - W B B B W W B 
+4 B B W B W B W W 
+5 B W B W B B B W 
+6 B B - W W - W B 
+7 B - - W B - - - 
+8 - - - - B - - - 
+
+Pruned branch.
