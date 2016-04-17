@@ -31,7 +31,7 @@ Depth: 1 Player: B
 7 - - - - - - - - 
 8 - - - - - - - - 
 
-Depth: 0 Player: W Successor Score: -2 Best Score: -2 Beta: -1000
+Depth: 0 Player: W Successor Score: 0 Best Score: 0 Beta: -1000
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - - - - - 
@@ -42,7 +42,7 @@ Depth: 0 Player: W Successor Score: -2 Best Score: -2 Beta: -1000
 7 - - - - - - - - 
 8 - - - - - - - - 
 
-Depth: 0 Player: W Successor Score: -2 Best Score: -2 Beta: -1000
+Depth: 0 Player: W Successor Score: -2 Best Score: 0 Beta: -1000
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - - - - - 
@@ -53,7 +53,7 @@ Depth: 0 Player: W Successor Score: -2 Best Score: -2 Beta: -1000
 7 - - - - - - - - 
 8 - - - - - - - - 
 
-Depth: 0 Player: W Successor Score: -2 Best Score: -2 Beta: -1000
+Depth: 0 Player: W Successor Score: 1 Best Score: 1 Beta: -1000
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - - - - - 
@@ -64,7 +64,7 @@ Depth: 0 Player: W Successor Score: -2 Best Score: -2 Beta: -1000
 7 - - - - - - - - 
 8 - - - - - - - - 
 
-Depth: 0 Player: W Successor Score: -2 Best Score: -2 Beta: -1000
+Depth: 0 Player: W Successor Score: -2 Best Score: 1 Beta: -1000
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - - - - - 
@@ -75,7 +75,7 @@ Depth: 0 Player: W Successor Score: -2 Best Score: -2 Beta: -1000
 7 - - - - - - - - 
 8 - - - - - - - - 
 
-Depth: 0 Player: W Successor Score: -2 Best Score: -2 Beta: -1000
+Depth: 0 Player: W Successor Score: 1 Best Score: 1 Beta: -1000
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - - - - - 
@@ -86,7 +86,7 @@ Depth: 0 Player: W Successor Score: -2 Best Score: -2 Beta: -1000
 7 - - - - - - - - 
 8 - - - - - - - - 
 
-Depth: 0 Player: W Successor Score: 0 Best Score: 0 Beta: -1000
+Depth: 0 Player: W Successor Score: 0 Best Score: 1 Beta: -1000
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - - - - - 
@@ -97,7 +97,7 @@ Depth: 0 Player: W Successor Score: 0 Best Score: 0 Beta: -1000
 7 - - - B - - - - 
 8 - - - - - - - - 
 
-Depth: 1 Player: B Successor Score: 0 Best Score: 0 Beta: -1000
+Depth: 1 Player: B Successor Score: -1 Best Score: -1 Beta: -1000
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - - - - - 
@@ -119,7 +119,7 @@ Depth: 1 Player: B
 7 - - - - - - - - 
 8 - - - - - - - - 
 
-Depth: 0 Player: W Successor Score: -2 Best Score: -2 Beta: 0
+Depth: 0 Player: W Successor Score: -2 Best Score: -2 Beta: -1
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - B - - - - - 
@@ -130,7 +130,7 @@ Depth: 0 Player: W Successor Score: -2 Best Score: -2 Beta: 0
 7 - - - - - - - - 
 8 - - - - - - - - 
 
-Depth: 0 Player: W Successor Score: -2 Best Score: -2 Beta: 0
+Depth: 0 Player: W Successor Score: 1 Best Score: 1 Beta: -1
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - - - - - 
@@ -141,7 +141,7 @@ Depth: 0 Player: W Successor Score: -2 Best Score: -2 Beta: 0
 7 - - - - - - - - 
 8 - - - - - - - - 
 
-Depth: 0 Player: W Successor Score: 0 Best Score: 0 Beta: 0
+Depth: 0 Player: W Successor Score: 4 Best Score: 4 Beta: -1
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - - - - - 
@@ -152,18 +152,8 @@ Depth: 0 Player: W Successor Score: 0 Best Score: 0 Beta: 0
 7 - - - - - - - - 
 8 - - - - - - - - 
 
-Depth: 0 Player: W Successor Score: -2 Best Score: 0 Beta: 0
-  1 2 3 4 5 6 7 8
-1 - - - - - - - - 
-2 - - - - - - - - 
-3 - - W - - - - - 
-4 - - B W B - - - 
-5 - - - W W B W - 
-6 - - - W - - B - 
-7 - - - - - - - - 
-8 - - - - - - - - 
-
-Depth: 1 Player: B Successor Score: 0 Best Score: 0 Beta: 0
+Pruned branch.
+Depth: 1 Player: B Successor Score: -4 Best Score: -1 Beta: -1
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - - - - - 
@@ -185,7 +175,7 @@ Depth: 1 Player: B
 7 - - - - - - - - 
 8 - - - - - - - - 
 
-Depth: 0 Player: W Successor Score: -4 Best Score: -4 Beta: 0
+Depth: 0 Player: W Successor Score: 0 Best Score: 0 Beta: -1
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - B - - - 
@@ -196,7 +186,7 @@ Depth: 0 Player: W Successor Score: -4 Best Score: -4 Beta: 0
 7 - - - - - - - - 
 8 - - - - - - - - 
 
-Depth: 0 Player: W Successor Score: -2 Best Score: -2 Beta: 0
+Depth: 0 Player: W Successor Score: 1 Best Score: 1 Beta: -1
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - - - - - 
@@ -207,7 +197,7 @@ Depth: 0 Player: W Successor Score: -2 Best Score: -2 Beta: 0
 7 - - - - - - - - 
 8 - - - - - - - - 
 
-Depth: 0 Player: W Successor Score: -4 Best Score: -2 Beta: 0
+Depth: 0 Player: W Successor Score: 1 Best Score: 1 Beta: -1
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - - - - - 
@@ -218,7 +208,7 @@ Depth: 0 Player: W Successor Score: -4 Best Score: -2 Beta: 0
 7 - - - - - - - - 
 8 - - - - - - - - 
 
-Depth: 1 Player: B Successor Score: 2 Best Score: 2 Beta: 0
+Depth: 1 Player: B Successor Score: -1 Best Score: -1 Beta: -1
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - - - - - 
@@ -240,7 +230,7 @@ Depth: 1 Player: B
 7 - - - - - - - - 
 8 - - - - - - - - 
 
-Depth: 0 Player: W Successor Score: -2 Best Score: -2 Beta: 2
+Depth: 0 Player: W Successor Score: 1 Best Score: 1 Beta: -1
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - - B - - 
@@ -251,7 +241,7 @@ Depth: 0 Player: W Successor Score: -2 Best Score: -2 Beta: 2
 7 - - - - - - - - 
 8 - - - - - - - - 
 
-Depth: 0 Player: W Successor Score: -2 Best Score: -2 Beta: 2
+Depth: 0 Player: W Successor Score: 1 Best Score: 1 Beta: -1
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - - - - - 
@@ -262,7 +252,7 @@ Depth: 0 Player: W Successor Score: -2 Best Score: -2 Beta: 2
 7 - - - - - - - - 
 8 - - - - - - - - 
 
-Depth: 0 Player: W Successor Score: -2 Best Score: -2 Beta: 2
+Depth: 0 Player: W Successor Score: 1 Best Score: 1 Beta: -1
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - - - - - 
@@ -273,7 +263,7 @@ Depth: 0 Player: W Successor Score: -2 Best Score: -2 Beta: 2
 7 - - - - - - - - 
 8 - - - - - - - - 
 
-Depth: 0 Player: W Successor Score: -2 Best Score: -2 Beta: 2
+Depth: 0 Player: W Successor Score: -2 Best Score: 1 Beta: -1
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - - - - - 
@@ -284,7 +274,7 @@ Depth: 0 Player: W Successor Score: -2 Best Score: -2 Beta: 2
 7 - - - - - - - - 
 8 - - - - - - - - 
 
-Depth: 0 Player: W Successor Score: 0 Best Score: 0 Beta: 2
+Depth: 0 Player: W Successor Score: 0 Best Score: 1 Beta: -1
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - - - - - 
@@ -295,8 +285,7 @@ Depth: 0 Player: W Successor Score: 0 Best Score: 0 Beta: 2
 7 - - - B - - - - 
 8 - - - - - - - - 
 
-Pruned branch.
-Depth: 1 Player: B Successor Score: 0 Best Score: 2 Beta: 2
+Depth: 1 Player: B Successor Score: -1 Best Score: -1 Beta: -1
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - - - - - 
@@ -318,7 +307,7 @@ Depth: 1 Player: B
 7 - - - - - - - - 
 8 - - - - - - - - 
 
-Depth: 0 Player: W Successor Score: -2 Best Score: -2 Beta: 2
+Depth: 0 Player: W Successor Score: 4 Best Score: 4 Beta: -1
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - - - - - 
@@ -329,41 +318,8 @@ Depth: 0 Player: W Successor Score: -2 Best Score: -2 Beta: 2
 7 - - - - - - - - 
 8 - - - - - - - - 
 
-Depth: 0 Player: W Successor Score: -2 Best Score: -2 Beta: 2
-  1 2 3 4 5 6 7 8
-1 - - - - - - - - 
-2 - - - - - - - - 
-3 - - - - - W - - 
-4 - - B B W - - - 
-5 - - - B W W W - 
-6 - - - W B - - - 
-7 - - - - - - - - 
-8 - - - - - - - - 
-
-Depth: 0 Player: W Successor Score: -2 Best Score: -2 Beta: 2
-  1 2 3 4 5 6 7 8
-1 - - - - - - - - 
-2 - - - - - - - - 
-3 - - - - - W - - 
-4 - - B B W - - - 
-5 - - - W B W W - 
-6 - - - W - B - - 
-7 - - - - - - - - 
-8 - - - - - - - - 
-
-Depth: 0 Player: W Successor Score: 0 Best Score: 0 Beta: 2
-  1 2 3 4 5 6 7 8
-1 - - - - - - - - 
-2 - - - - - - - - 
-3 - - - - - W - - 
-4 - - B B W - - - 
-5 - - - B W W W - 
-6 - - - B - - - - 
-7 - - - B - - - - 
-8 - - - - - - - - 
-
 Pruned branch.
-Depth: 1 Player: B Successor Score: 0 Best Score: 2 Beta: 2
+Depth: 1 Player: B Successor Score: -4 Best Score: -1 Beta: -1
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - - - - - 
@@ -374,7 +330,7 @@ Depth: 1 Player: B Successor Score: 0 Best Score: 2 Beta: 2
 7 - - - - - - - - 
 8 - - - - - - - - 
 
-Depth: 2 Player: W Successor Score: -2 Best Score: -2 Beta: 2
+Depth: 2 Player: W Successor Score: 1 Best Score: 1 Beta: -1
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - - - - - 
@@ -407,7 +363,7 @@ Depth: 1 Player: B
 7 - - - - - - - - 
 8 - - - - - - - - 
 
-Depth: 0 Player: W Successor Score: 0 Best Score: 0 Beta: -1000
+Depth: 0 Player: W Successor Score: -3 Best Score: -3 Beta: -1000
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - B - - - - 
@@ -418,7 +374,7 @@ Depth: 0 Player: W Successor Score: 0 Best Score: 0 Beta: -1000
 7 - - - - - - - - 
 8 - - - - - - - - 
 
-Depth: 0 Player: W Successor Score: -2 Best Score: 0 Beta: -1000
+Depth: 0 Player: W Successor Score: -5 Best Score: -3 Beta: -1000
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - - - - - 
@@ -429,7 +385,7 @@ Depth: 0 Player: W Successor Score: -2 Best Score: 0 Beta: -1000
 7 - - - - - - - - 
 8 - - - - - - - - 
 
-Depth: 0 Player: W Successor Score: 2 Best Score: 2 Beta: -1000
+Depth: 0 Player: W Successor Score: -6 Best Score: -3 Beta: -1000
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - - - - - 
@@ -440,7 +396,7 @@ Depth: 0 Player: W Successor Score: 2 Best Score: 2 Beta: -1000
 7 - - - - - - - - 
 8 - - - - - - - - 
 
-Depth: 0 Player: W Successor Score: -2 Best Score: 2 Beta: -1000
+Depth: 0 Player: W Successor Score: -10 Best Score: -3 Beta: -1000
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - - - - - 
@@ -451,7 +407,7 @@ Depth: 0 Player: W Successor Score: -2 Best Score: 2 Beta: -1000
 7 - - - - - - - - 
 8 - - - - - - - - 
 
-Depth: 0 Player: W Successor Score: -2 Best Score: 2 Beta: -1000
+Depth: 0 Player: W Successor Score: -3 Best Score: -3 Beta: -1000
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - - - - - 
@@ -462,7 +418,7 @@ Depth: 0 Player: W Successor Score: -2 Best Score: 2 Beta: -1000
 7 - - - B - - - - 
 8 - - - - - - - - 
 
-Depth: 1 Player: B Successor Score: -2 Best Score: -2 Beta: -1000
+Depth: 1 Player: B Successor Score: 3 Best Score: 3 Beta: -1000
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - - - - - 
@@ -484,7 +440,7 @@ Depth: 1 Player: B
 7 - - - - - - - - 
 8 - - - - - - - - 
 
-Depth: 0 Player: W Successor Score: -2 Best Score: -2 Beta: -2
+Depth: 0 Player: W Successor Score: -2 Best Score: -2 Beta: 3
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - - - - - 
@@ -495,51 +451,8 @@ Depth: 0 Player: W Successor Score: -2 Best Score: -2 Beta: -2
 7 - - - - - - - - 
 8 - - - - - - - - 
 
-Depth: 0 Player: W Successor Score: -2 Best Score: -2 Beta: -2
-  1 2 3 4 5 6 7 8
-1 - - - - - - - - 
-2 - - - - - - - - 
-3 - - - - W B - - 
-4 - - - W B - - - 
-5 - - - B W W W - 
-6 - - B W - - - - 
-7 - - - - - - - - 
-8 - - - - - - - - 
-
-Depth: 0 Player: W Successor Score: 2 Best Score: 2 Beta: -2
-  1 2 3 4 5 6 7 8
-1 - - - - - - - - 
-2 - - - - - - - - 
-3 - - - - W - - - 
-4 - - - W W - - - 
-5 - - - B B B B B 
-6 - - B W - - - - 
-7 - - - - - - - - 
-8 - - - - - - - - 
-
-Depth: 0 Player: W Successor Score: -2 Best Score: 2 Beta: -2
-  1 2 3 4 5 6 7 8
-1 - - - - - - - - 
-2 - - - - - - - - 
-3 - - - - W - - - 
-4 - - - W W - - - 
-5 - - - B W W W - 
-6 - - B B B - - - 
-7 - - - - - - - - 
-8 - - - - - - - - 
-
-Depth: 0 Player: W Successor Score: -2 Best Score: 2 Beta: -2
-  1 2 3 4 5 6 7 8
-1 - - - - - - - - 
-2 - - - - - - - - 
-3 - - - - W - - - 
-4 - - - W W - - - 
-5 - - - B W W W - 
-6 - - B B - - - - 
-7 - - - B - - - - 
-8 - - - - - - - - 
-
-Depth: 1 Player: B Successor Score: -2 Best Score: -2 Beta: -2
+Pruned branch.
+Depth: 1 Player: B Successor Score: 2 Best Score: 3 Beta: 3
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - - - - - 
@@ -561,7 +474,7 @@ Depth: 1 Player: B
 7 - - - - - - - - 
 8 - - - - - - - - 
 
-Depth: 0 Player: W Successor Score: -2 Best Score: -2 Beta: -2
+Depth: 0 Player: W Successor Score: -2 Best Score: -2 Beta: 3
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - - - - - 
@@ -572,51 +485,8 @@ Depth: 0 Player: W Successor Score: -2 Best Score: -2 Beta: -2
 7 - - - - - - - - 
 8 - - - - - - - - 
 
-Depth: 0 Player: W Successor Score: -2 Best Score: -2 Beta: -2
-  1 2 3 4 5 6 7 8
-1 - - - - - - - - 
-2 - - - - - - - - 
-3 - - - - - B - - 
-4 - - - W B W - - 
-5 - - - B W W W - 
-6 - - B W - - - - 
-7 - - - - - - - - 
-8 - - - - - - - - 
-
-Depth: 0 Player: W Successor Score: 2 Best Score: 2 Beta: -2
-  1 2 3 4 5 6 7 8
-1 - - - - - - - - 
-2 - - - - - - - - 
-3 - - - - - - - - 
-4 - - - W W W - - 
-5 - - - B B B B B 
-6 - - B W - - - - 
-7 - - - - - - - - 
-8 - - - - - - - - 
-
-Depth: 0 Player: W Successor Score: -2 Best Score: 2 Beta: -2
-  1 2 3 4 5 6 7 8
-1 - - - - - - - - 
-2 - - - - - - - - 
-3 - - - - - - - - 
-4 - - - W W W - - 
-5 - - - B W W W - 
-6 - - B B B - - - 
-7 - - - - - - - - 
-8 - - - - - - - - 
-
-Depth: 0 Player: W Successor Score: -2 Best Score: 2 Beta: -2
-  1 2 3 4 5 6 7 8
-1 - - - - - - - - 
-2 - - - - - - - - 
-3 - - - - - - - - 
-4 - - - W W W - - 
-5 - - - B W W W - 
-6 - - B B - - - - 
-7 - - - B - - - - 
-8 - - - - - - - - 
-
-Depth: 1 Player: B Successor Score: -2 Best Score: -2 Beta: -2
+Pruned branch.
+Depth: 1 Player: B Successor Score: 2 Best Score: 3 Beta: 3
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - - - - - 
@@ -638,7 +508,7 @@ Depth: 1 Player: B
 7 - - - - - - - - 
 8 - - - - - - - - 
 
-Depth: 0 Player: W Successor Score: 0 Best Score: 0 Beta: -2
+Depth: 0 Player: W Successor Score: -10 Best Score: -10 Beta: 3
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - - - - - 
@@ -649,7 +519,7 @@ Depth: 0 Player: W Successor Score: 0 Best Score: 0 Beta: -2
 7 - - - - - - - - 
 8 - - - - - - - - 
 
-Depth: 0 Player: W Successor Score: 0 Best Score: 0 Beta: -2
+Depth: 0 Player: W Successor Score: -10 Best Score: -10 Beta: 3
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - - - - - 
@@ -660,7 +530,7 @@ Depth: 0 Player: W Successor Score: 0 Best Score: 0 Beta: -2
 7 - - - - - - - - 
 8 - - - - - - - - 
 
-Depth: 0 Player: W Successor Score: -2 Best Score: 0 Beta: -2
+Depth: 0 Player: W Successor Score: -2 Best Score: -2 Beta: 3
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - - - - - 
@@ -671,7 +541,8 @@ Depth: 0 Player: W Successor Score: -2 Best Score: 0 Beta: -2
 7 - - - - - - - - 
 8 - - - - - - - - 
 
-Depth: 1 Player: B Successor Score: 0 Best Score: 0 Beta: -2
+Pruned branch.
+Depth: 1 Player: B Successor Score: 2 Best Score: 3 Beta: 3
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - - - - - 
@@ -693,7 +564,7 @@ Depth: 1 Player: B
 7 - - - - - - - - 
 8 - - - - - - - - 
 
-Depth: 0 Player: W Successor Score: -2 Best Score: -2 Beta: 0
+Depth: 0 Player: W Successor Score: 4 Best Score: 4 Beta: 3
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - - - - - 
@@ -704,30 +575,8 @@ Depth: 0 Player: W Successor Score: -2 Best Score: -2 Beta: 0
 7 - - - - - - - - 
 8 - - - - - - - - 
 
-Depth: 0 Player: W Successor Score: -2 Best Score: -2 Beta: 0
-  1 2 3 4 5 6 7 8
-1 - - - - - - - - 
-2 - - - - - - - - 
-3 - - - - - - - - 
-4 - - B B B - - - 
-5 - - - B W W W - 
-6 - W W W - - - - 
-7 - - - - - - - - 
-8 - - - - - - - - 
-
-Depth: 0 Player: W Successor Score: 2 Best Score: 2 Beta: 0
-  1 2 3 4 5 6 7 8
-1 - - - - - - - - 
-2 - - - - - - - - 
-3 - - - - - - - - 
-4 - - - W B - - - 
-5 - - - B B B B B 
-6 - W W W - - - - 
-7 - - - - - - - - 
-8 - - - - - - - - 
-
 Pruned branch.
-Depth: 1 Player: B Successor Score: -2 Best Score: 0 Beta: 0
+Depth: 1 Player: B Successor Score: -4 Best Score: 3 Beta: 3
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - - - - - 
@@ -738,7 +587,7 @@ Depth: 1 Player: B Successor Score: -2 Best Score: 0 Beta: 0
 7 - - - - - - - - 
 8 - - - - - - - - 
 
-Depth: 2 Player: W Successor Score: 0 Best Score: 0 Beta: 0
+Depth: 2 Player: W Successor Score: -3 Best Score: 1 Beta: 3
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - - - - - 
@@ -782,7 +631,7 @@ Depth: 0 Player: W Successor Score: -2 Best Score: -2 Beta: -1000
 7 - - - - - - - - 
 8 - - - - - - - - 
 
-Depth: 0 Player: W Successor Score: -2 Best Score: -2 Beta: -1000
+Depth: 0 Player: W Successor Score: 1 Best Score: 1 Beta: -1000
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - - - - - 
@@ -793,7 +642,7 @@ Depth: 0 Player: W Successor Score: -2 Best Score: -2 Beta: -1000
 7 - - - - - - - - 
 8 - - - - - - - - 
 
-Depth: 0 Player: W Successor Score: -2 Best Score: -2 Beta: -1000
+Depth: 0 Player: W Successor Score: 1 Best Score: 1 Beta: -1000
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - - - - - 
@@ -804,7 +653,7 @@ Depth: 0 Player: W Successor Score: -2 Best Score: -2 Beta: -1000
 7 - - - - - - - - 
 8 - - - - - - - - 
 
-Depth: 0 Player: W Successor Score: -2 Best Score: -2 Beta: -1000
+Depth: 0 Player: W Successor Score: 0 Best Score: 1 Beta: -1000
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - - - - - 
@@ -815,7 +664,7 @@ Depth: 0 Player: W Successor Score: -2 Best Score: -2 Beta: -1000
 7 - - - - - - - - 
 8 - - - - - - - - 
 
-Depth: 0 Player: W Successor Score: -2 Best Score: -2 Beta: -1000
+Depth: 0 Player: W Successor Score: 1 Best Score: 1 Beta: -1000
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - - - - - 
@@ -826,7 +675,7 @@ Depth: 0 Player: W Successor Score: -2 Best Score: -2 Beta: -1000
 7 - - - - - - - - 
 8 - - - - - - - - 
 
-Depth: 0 Player: W Successor Score: 0 Best Score: 0 Beta: -1000
+Depth: 0 Player: W Successor Score: -3 Best Score: 1 Beta: -1000
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - - - - - 
@@ -837,7 +686,7 @@ Depth: 0 Player: W Successor Score: 0 Best Score: 0 Beta: -1000
 7 - - - - - - - - 
 8 - - - - - - - - 
 
-Depth: 0 Player: W Successor Score: -2 Best Score: 0 Beta: -1000
+Depth: 0 Player: W Successor Score: -10 Best Score: 1 Beta: -1000
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - - - - - 
@@ -848,7 +697,7 @@ Depth: 0 Player: W Successor Score: -2 Best Score: 0 Beta: -1000
 7 - - - - - - - - 
 8 - - - - - - - - 
 
-Depth: 0 Player: W Successor Score: -2 Best Score: 0 Beta: -1000
+Depth: 0 Player: W Successor Score: 1 Best Score: 1 Beta: -1000
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - - - - - 
@@ -859,7 +708,7 @@ Depth: 0 Player: W Successor Score: -2 Best Score: 0 Beta: -1000
 7 - - B - - - - - 
 8 - - - - - - - - 
 
-Depth: 1 Player: B Successor Score: 0 Best Score: 0 Beta: -1000
+Depth: 1 Player: B Successor Score: -1 Best Score: -1 Beta: -1000
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - - - - - 
@@ -881,7 +730,7 @@ Depth: 1 Player: B
 7 - - - - - - - - 
 8 - - - - - - - - 
 
-Depth: 0 Player: W Successor Score: -2 Best Score: -2 Beta: 0
+Depth: 0 Player: W Successor Score: 1 Best Score: 1 Beta: -1
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - - - - - 
@@ -892,7 +741,7 @@ Depth: 0 Player: W Successor Score: -2 Best Score: -2 Beta: 0
 7 - - - - - - - - 
 8 - - - - - - - - 
 
-Depth: 0 Player: W Successor Score: -2 Best Score: -2 Beta: 0
+Depth: 0 Player: W Successor Score: 4 Best Score: 4 Beta: -1
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - - - - - 
@@ -903,73 +752,8 @@ Depth: 0 Player: W Successor Score: -2 Best Score: -2 Beta: 0
 7 - - - - - - - - 
 8 - - - - - - - - 
 
-Depth: 0 Player: W Successor Score: -2 Best Score: -2 Beta: 0
-  1 2 3 4 5 6 7 8
-1 - - - - - - - - 
-2 - - - - - - - - 
-3 - - - - - W - - 
-4 - - B W W - - - 
-5 - - - B B W W - 
-6 - - - W B - - - 
-7 - - - - - - - - 
-8 - - - - - - - - 
-
-Depth: 0 Player: W Successor Score: -2 Best Score: -2 Beta: 0
-  1 2 3 4 5 6 7 8
-1 - - - - - - - - 
-2 - - - - - - - - 
-3 - - - - - W - - 
-4 - - - W W - B - 
-5 - - - W B B W - 
-6 - - - W B - - - 
-7 - - - - - - - - 
-8 - - - - - - - - 
-
-Depth: 0 Player: W Successor Score: -2 Best Score: -2 Beta: 0
-  1 2 3 4 5 6 7 8
-1 - - - - - - - - 
-2 - - - - - - - - 
-3 - - - - - W - - 
-4 - - - W W - - - 
-5 - - B B B W W - 
-6 - - - W B - - - 
-7 - - - - - - - - 
-8 - - - - - - - - 
-
-Depth: 0 Player: W Successor Score: 0 Best Score: 0 Beta: 0
-  1 2 3 4 5 6 7 8
-1 - - - - - - - - 
-2 - - - - - - - - 
-3 - - - - - W - - 
-4 - - - W W - - - 
-5 - - - W B B B B 
-6 - - - W B - - - 
-7 - - - - - - - - 
-8 - - - - - - - - 
-
-Depth: 0 Player: W Successor Score: -2 Best Score: 0 Beta: 0
-  1 2 3 4 5 6 7 8
-1 - - - - - - - - 
-2 - - - - - - - - 
-3 - - - - - W - - 
-4 - - - W W - - - 
-5 - - - W B W W - 
-6 - - B B B - - - 
-7 - - - - - - - - 
-8 - - - - - - - - 
-
-Depth: 0 Player: W Successor Score: -2 Best Score: 0 Beta: 0
-  1 2 3 4 5 6 7 8
-1 - - - - - - - - 
-2 - - - - - - - - 
-3 - - - - - W - - 
-4 - - - W W - - - 
-5 - - - W B W W - 
-6 - - - B B - - - 
-7 - - B - - - - - 
-8 - - - - - - - - 
-
-Depth: 1 Player: B Successor Score: 0 Best Score: 0 Beta: 0
+Pruned branch.
+Depth: 1 Player: B Successor Score: -4 Best Score: -1 Beta: -1
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - - - - - 
@@ -991,7 +775,7 @@ Depth: 1 Player: B
 7 - - - - - - - - 
 8 - - - - - - - - 
 
-Depth: 0 Player: W Successor Score: -2 Best Score: -2 Beta: 0
+Depth: 0 Player: W Successor Score: 1 Best Score: 1 Beta: -1
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - - - - - 
@@ -1002,7 +786,7 @@ Depth: 0 Player: W Successor Score: -2 Best Score: -2 Beta: 0
 7 - - - - - - - - 
 8 - - - - - - - - 
 
-Depth: 0 Player: W Successor Score: -4 Best Score: -2 Beta: 0
+Depth: 0 Player: W Successor Score: 1 Best Score: 1 Beta: -1
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - - - - - 
@@ -1013,7 +797,7 @@ Depth: 0 Player: W Successor Score: -4 Best Score: -2 Beta: 0
 7 - - - - - - - - 
 8 - - - - - - - - 
 
-Depth: 0 Player: W Successor Score: -4 Best Score: -2 Beta: 0
+Depth: 0 Player: W Successor Score: 0 Best Score: 1 Beta: -1
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - - - - - 
@@ -1024,7 +808,7 @@ Depth: 0 Player: W Successor Score: -4 Best Score: -2 Beta: 0
 7 - - - - - - - - 
 8 - - - - - - - - 
 
-Depth: 0 Player: W Successor Score: -4 Best Score: -2 Beta: 0
+Depth: 0 Player: W Successor Score: -10 Best Score: 1 Beta: -1
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - - - - - 
@@ -1035,7 +819,7 @@ Depth: 0 Player: W Successor Score: -4 Best Score: -2 Beta: 0
 7 - - - - - - - - 
 8 - - - - - - - - 
 
-Depth: 1 Player: B Successor Score: 2 Best Score: 2 Beta: 0
+Depth: 1 Player: B Successor Score: -1 Best Score: -1 Beta: -1
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - - - - - 
@@ -1057,7 +841,7 @@ Depth: 1 Player: B
 7 - - - - - - - - 
 8 - - - - - - - - 
 
-Depth: 0 Player: W Successor Score: -4 Best Score: -4 Beta: 2
+Depth: 0 Player: W Successor Score: 12 Best Score: 12 Beta: -1
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - - - - - 
@@ -1068,40 +852,8 @@ Depth: 0 Player: W Successor Score: -4 Best Score: -4 Beta: 2
 7 - - - - - - - - 
 8 - - - - - - - - 
 
-Depth: 0 Player: W Successor Score: -4 Best Score: -4 Beta: 2
-  1 2 3 4 5 6 7 8
-1 - - - - - - - - 
-2 - - - - - - - - 
-3 - - - - - - - - 
-4 - - - W B - - - 
-5 - - - B W W W - 
-6 - - B W W W - - 
-7 - - - - - - - - 
-8 - - - - - - - - 
-
-Depth: 0 Player: W Successor Score: -4 Best Score: -4 Beta: 2
-  1 2 3 4 5 6 7 8
-1 - - - - - - - - 
-2 - - - - - - - - 
-3 - - - - - - - - 
-4 - - - W B - - - 
-5 - - - W W B W - 
-6 - - - W W W B - 
-7 - - - - - - - - 
-8 - - - - - - - - 
-
-Depth: 0 Player: W Successor Score: -2 Best Score: -2 Beta: 2
-  1 2 3 4 5 6 7 8
-1 - - - - - - - - 
-2 - - - - - - - - 
-3 - - - - - - - - 
-4 - - - W B - - - 
-5 - - - W B W W - 
-6 - - - W B W - - 
-7 - - - - B - - - 
-8 - - - - - - - - 
-
-Depth: 1 Player: B Successor Score: 2 Best Score: 2 Beta: 2
+Pruned branch.
+Depth: 1 Player: B Successor Score: -12 Best Score: -1 Beta: -1
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - - - - - 
@@ -1123,7 +875,7 @@ Depth: 1 Player: B
 7 - - - W - - - - 
 8 - - - - - - - - 
 
-Depth: 0 Player: W Successor Score: -2 Best Score: -2 Beta: 2
+Depth: 0 Player: W Successor Score: -1 Best Score: -1 Beta: -1
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - - - - - 
@@ -1134,7 +886,7 @@ Depth: 0 Player: W Successor Score: -2 Best Score: -2 Beta: 2
 7 - - - W - - - - 
 8 - - - - - - - - 
 
-Depth: 0 Player: W Successor Score: -2 Best Score: -2 Beta: 2
+Depth: 0 Player: W Successor Score: 2 Best Score: 2 Beta: -1
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - - - - - 
@@ -1145,30 +897,8 @@ Depth: 0 Player: W Successor Score: -2 Best Score: -2 Beta: 2
 7 - - - W - - - - 
 8 - - - - - - - - 
 
-Depth: 0 Player: W Successor Score: -2 Best Score: -2 Beta: 2
-  1 2 3 4 5 6 7 8
-1 - - - - - - - - 
-2 - - - - - - - - 
-3 - - - - - - - - 
-4 - - - W B - - - 
-5 - - B B B W W - 
-6 - - - W W - - - 
-7 - - - W - - - - 
-8 - - - - - - - - 
-
-Depth: 0 Player: W Successor Score: 0 Best Score: 0 Beta: 2
-  1 2 3 4 5 6 7 8
-1 - - - - - - - - 
-2 - - - - - - - - 
-3 - - - - - - - - 
-4 - - - W B - - - 
-5 - - - W B B B B 
-6 - - - W W - - - 
-7 - - - W - - - - 
-8 - - - - - - - - 
-
 Pruned branch.
-Depth: 1 Player: B Successor Score: 0 Best Score: 2 Beta: 2
+Depth: 1 Player: B Successor Score: -2 Best Score: -1 Beta: -1
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - - - - - 
@@ -1190,7 +920,7 @@ Depth: 1 Player: B
 7 - - - - - W - - 
 8 - - - - - - - - 
 
-Depth: 0 Player: W Successor Score: -2 Best Score: -2 Beta: 2
+Depth: 0 Player: W Successor Score: -2 Best Score: -2 Beta: -1
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - - - - - 
@@ -1201,7 +931,7 @@ Depth: 0 Player: W Successor Score: -2 Best Score: -2 Beta: 2
 7 - - - - - W - - 
 8 - - - - - - - - 
 
-Depth: 0 Player: W Successor Score: -2 Best Score: -2 Beta: 2
+Depth: 0 Player: W Successor Score: 1 Best Score: 1 Beta: -1
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - - - - - 
@@ -1212,7 +942,7 @@ Depth: 0 Player: W Successor Score: -2 Best Score: -2 Beta: 2
 7 - - - - - W - - 
 8 - - - - - - - - 
 
-Depth: 0 Player: W Successor Score: -2 Best Score: -2 Beta: 2
+Depth: 0 Player: W Successor Score: 1 Best Score: 1 Beta: -1
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - - - - - 
@@ -1223,7 +953,7 @@ Depth: 0 Player: W Successor Score: -2 Best Score: -2 Beta: 2
 7 - - - - - W - - 
 8 - - - - - - - - 
 
-Depth: 0 Player: W Successor Score: 0 Best Score: 0 Beta: 2
+Depth: 0 Player: W Successor Score: -3 Best Score: 1 Beta: -1
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - - - - - 
@@ -1234,8 +964,51 @@ Depth: 0 Player: W Successor Score: 0 Best Score: 0 Beta: 2
 7 - - - - - W - - 
 8 - - - - - - - - 
 
-Pruned branch.
-Depth: 1 Player: B Successor Score: 0 Best Score: 2 Beta: 2
+Depth: 0 Player: W Successor Score: -2 Best Score: 1 Beta: -1
+  1 2 3 4 5 6 7 8
+1 - - - - - - - - 
+2 - - - - - - - - 
+3 - - - - - - - - 
+4 - - - W B - - - 
+5 - - - B B W W - 
+6 - - B W W - - - 
+7 - - - - - W - - 
+8 - - - - - - - - 
+
+Depth: 0 Player: W Successor Score: 1 Best Score: 1 Beta: -1
+  1 2 3 4 5 6 7 8
+1 - - - - - - - - 
+2 - - - - - - - - 
+3 - - - - - - - - 
+4 - - - W B - - - 
+5 - - - W B B W - 
+6 - - - W W - B - 
+7 - - - - - W - - 
+8 - - - - - - - - 
+
+Depth: 0 Player: W Successor Score: 1 Best Score: 1 Beta: -1
+  1 2 3 4 5 6 7 8
+1 - - - - - - - - 
+2 - - - - - - - - 
+3 - - - - - - - - 
+4 - - - W B - - - 
+5 - - - W B W W - 
+6 - - - B W - - - 
+7 - - B - - W - - 
+8 - - - - - - - - 
+
+Depth: 0 Player: W Successor Score: 0 Best Score: 1 Beta: -1
+  1 2 3 4 5 6 7 8
+1 - - - - - - - - 
+2 - - - - - - - - 
+3 - - - - - - - - 
+4 - - - W B - - - 
+5 - - - W B W W - 
+6 - - - W B - - - 
+7 - - - - B W - - 
+8 - - - - - - - - 
+
+Depth: 1 Player: B Successor Score: -1 Best Score: -1 Beta: -1
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - - - - - 
@@ -1246,7 +1019,7 @@ Depth: 1 Player: B Successor Score: 0 Best Score: 2 Beta: 2
 7 - - - - - W - - 
 8 - - - - - - - - 
 
-Depth: 2 Player: W Successor Score: -2 Best Score: 0 Beta: 2
+Depth: 2 Player: W Successor Score: 1 Best Score: 1 Beta: -1
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - - - - - 
@@ -1279,7 +1052,7 @@ Depth: 1 Player: B
 7 - - - - - - - - 
 8 - - - - - - - - 
 
-Depth: 0 Player: W Successor Score: -2 Best Score: -2 Beta: -1000
+Depth: 0 Player: W Successor Score: 1 Best Score: 1 Beta: -1000
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - - - - - 
@@ -1290,7 +1063,7 @@ Depth: 0 Player: W Successor Score: -2 Best Score: -2 Beta: -1000
 7 - - - - - - - - 
 8 - - - - - - - - 
 
-Depth: 0 Player: W Successor Score: -2 Best Score: -2 Beta: -1000
+Depth: 0 Player: W Successor Score: 14 Best Score: 14 Beta: -1000
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - - - - - 
@@ -1301,7 +1074,7 @@ Depth: 0 Player: W Successor Score: -2 Best Score: -2 Beta: -1000
 7 - - - - - - - - 
 8 - - - - - - - - 
 
-Depth: 0 Player: W Successor Score: 0 Best Score: 0 Beta: -1000
+Depth: 0 Player: W Successor Score: 1 Best Score: 14 Beta: -1000
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - - - - - 
@@ -1312,7 +1085,7 @@ Depth: 0 Player: W Successor Score: 0 Best Score: 0 Beta: -1000
 7 - - - - - - - - 
 8 - - - - - - - - 
 
-Depth: 0 Player: W Successor Score: -2 Best Score: 0 Beta: -1000
+Depth: 0 Player: W Successor Score: 5 Best Score: 14 Beta: -1000
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - - - - - 
@@ -1323,7 +1096,7 @@ Depth: 0 Player: W Successor Score: -2 Best Score: 0 Beta: -1000
 7 - - - - - - - - 
 8 - - - - - - - - 
 
-Depth: 1 Player: B Successor Score: 0 Best Score: 0 Beta: -1000
+Depth: 1 Player: B Successor Score: -14 Best Score: -14 Beta: -1000
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - - - - - 
@@ -1345,7 +1118,7 @@ Depth: 1 Player: B
 7 - - - - - - - - 
 8 - - - - - - - - 
 
-Depth: 0 Player: W Successor Score: -2 Best Score: -2 Beta: 0
+Depth: 0 Player: W Successor Score: 4 Best Score: 4 Beta: -14
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - - - - - 
@@ -1356,7 +1129,7 @@ Depth: 0 Player: W Successor Score: -2 Best Score: -2 Beta: 0
 7 - - - - - - - - 
 8 - - - - - - - - 
 
-Depth: 0 Player: W Successor Score: -2 Best Score: -2 Beta: 0
+Depth: 0 Player: W Successor Score: 17 Best Score: 17 Beta: -14
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - - - - - 
@@ -1367,29 +1140,8 @@ Depth: 0 Player: W Successor Score: -2 Best Score: -2 Beta: 0
 7 - - - - - - - - 
 8 - - - - - - - - 
 
-Depth: 0 Player: W Successor Score: 0 Best Score: 0 Beta: 0
-  1 2 3 4 5 6 7 8
-1 - - - - - - - - 
-2 - - - - - - - - 
-3 - - - - - W - - 
-4 - - - W W - - - 
-5 - - B B B B W - 
-6 - - - W - - B - 
-7 - - - - - - - - 
-8 - - - - - - - - 
-
-Depth: 0 Player: W Successor Score: -2 Best Score: 0 Beta: 0
-  1 2 3 4 5 6 7 8
-1 - - - - - - - - 
-2 - - - - - - - - 
-3 - - - - - W - - 
-4 - - - W W - - - 
-5 - - - W W B B B 
-6 - - - W - - B - 
-7 - - - - - - - - 
-8 - - - - - - - - 
-
-Depth: 1 Player: B Successor Score: 0 Best Score: 0 Beta: 0
+Pruned branch.
+Depth: 1 Player: B Successor Score: -17 Best Score: -14 Beta: -14
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - - - - - 
@@ -1411,7 +1163,7 @@ Depth: 1 Player: B
 7 - - - - - - - - 
 8 - - - - - - - - 
 
-Depth: 0 Player: W Successor Score: -2 Best Score: -2 Beta: 0
+Depth: 0 Player: W Successor Score: 1 Best Score: 1 Beta: -14
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - - - - - 
@@ -1422,7 +1174,7 @@ Depth: 0 Player: W Successor Score: -2 Best Score: -2 Beta: 0
 7 - - - - - - - - 
 8 - - - - - - - - 
 
-Depth: 0 Player: W Successor Score: -2 Best Score: -2 Beta: 0
+Depth: 0 Player: W Successor Score: -10 Best Score: 1 Beta: -14
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - - - - - 
@@ -1433,7 +1185,7 @@ Depth: 0 Player: W Successor Score: -2 Best Score: -2 Beta: 0
 7 - - - - - - - - 
 8 - - - - - - - - 
 
-Depth: 0 Player: W Successor Score: -2 Best Score: -2 Beta: 0
+Depth: 0 Player: W Successor Score: 14 Best Score: 14 Beta: -14
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - - - - - 
@@ -1444,7 +1196,7 @@ Depth: 0 Player: W Successor Score: -2 Best Score: -2 Beta: 0
 7 - - - - - - - - 
 8 - - - - - - - - 
 
-Depth: 0 Player: W Successor Score: 0 Best Score: 0 Beta: 0
+Depth: 0 Player: W Successor Score: 1 Best Score: 14 Beta: -14
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - - - - - 
@@ -1455,7 +1207,7 @@ Depth: 0 Player: W Successor Score: 0 Best Score: 0 Beta: 0
 7 - - - - - - - - 
 8 - - - - - - - - 
 
-Depth: 0 Player: W Successor Score: -2 Best Score: 0 Beta: 0
+Depth: 0 Player: W Successor Score: 5 Best Score: 14 Beta: -14
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - - - - - 
@@ -1466,7 +1218,7 @@ Depth: 0 Player: W Successor Score: -2 Best Score: 0 Beta: 0
 7 - - - - - - - - 
 8 - - - - - - - - 
 
-Depth: 1 Player: B Successor Score: 0 Best Score: 0 Beta: 0
+Depth: 1 Player: B Successor Score: -14 Best Score: -14 Beta: -14
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - - - - - 
@@ -1488,7 +1240,7 @@ Depth: 1 Player: B
 7 - - - - - - W - 
 8 - - - - - - - - 
 
-Depth: 0 Player: W Successor Score: -2 Best Score: -2 Beta: 0
+Depth: 0 Player: W Successor Score: -35 Best Score: -35 Beta: -14
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - - - - - 
@@ -1499,7 +1251,7 @@ Depth: 0 Player: W Successor Score: -2 Best Score: -2 Beta: 0
 7 - - - - - - W - 
 8 - - - - - - - - 
 
-Depth: 0 Player: W Successor Score: 0 Best Score: 0 Beta: 0
+Depth: 0 Player: W Successor Score: -35 Best Score: -35 Beta: -14
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - - - - - 
@@ -1510,7 +1262,7 @@ Depth: 0 Player: W Successor Score: 0 Best Score: 0 Beta: 0
 7 - - - - - - W - 
 8 - - - - - - - - 
 
-Depth: 0 Player: W Successor Score: -2 Best Score: 0 Beta: 0
+Depth: 0 Player: W Successor Score: -31 Best Score: -31 Beta: -14
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - - - - - 
@@ -1521,7 +1273,7 @@ Depth: 0 Player: W Successor Score: -2 Best Score: 0 Beta: 0
 7 - - - - - - W - 
 8 - - - - - - - - 
 
-Depth: 0 Player: W Successor Score: -2 Best Score: 0 Beta: 0
+Depth: 0 Player: W Successor Score: -38 Best Score: -31 Beta: -14
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - - - - - 
@@ -1532,7 +1284,7 @@ Depth: 0 Player: W Successor Score: -2 Best Score: 0 Beta: 0
 7 - - - - - - W - 
 8 - - - - - - - - 
 
-Depth: 0 Player: W Successor Score: -2 Best Score: 0 Beta: 0
+Depth: 0 Player: W Successor Score: -35 Best Score: -31 Beta: -14
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - - - - - 
@@ -1543,7 +1295,7 @@ Depth: 0 Player: W Successor Score: -2 Best Score: 0 Beta: 0
 7 - - - - - - W - 
 8 - - - - - - - - 
 
-Depth: 0 Player: W Successor Score: -2 Best Score: 0 Beta: 0
+Depth: 0 Player: W Successor Score: -15 Best Score: -15 Beta: -14
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - - - - - 
@@ -1554,7 +1306,7 @@ Depth: 0 Player: W Successor Score: -2 Best Score: 0 Beta: 0
 7 - - - - - - W B 
 8 - - - - - - - - 
 
-Depth: 1 Player: B Successor Score: 0 Best Score: 0 Beta: 0
+Depth: 1 Player: B Successor Score: 15 Best Score: 15 Beta: -14
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - - - - - 
@@ -1565,7 +1317,7 @@ Depth: 1 Player: B Successor Score: 0 Best Score: 0 Beta: 0
 7 - - - - - - W - 
 8 - - - - - - - - 
 
-Depth: 2 Player: W Successor Score: 0 Best Score: 0 Beta: 0
+Depth: 2 Player: W Successor Score: -15 Best Score: 1 Beta: 15
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - - - - - 
