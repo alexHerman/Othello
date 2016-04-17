@@ -93,6 +93,8 @@ Note: these functions may need additional arguments.
 						)
 						(when (= depth 2) 
 						(setf beta best-score))
+						(when (> depth 2) 
+						(setf beta -1000))
 					)
 					(list best-score best-path)
 					
