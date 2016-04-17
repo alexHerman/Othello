@@ -4,24 +4,42 @@
 	(<= depth 0)
 )
 
-(defun static (position player)
-	(let ((black 0) (white 0))
-		(do ((y 1 (1+ y))) ((> y 8) 'T)
-			(do ((x 1 (1+ x))) ((> x 8) 'T)
-				(if (equal (getValue position x y) 'B) (setf black (1+ black)))
-				(if (equal (getValue position x y) 'W) (setf white (1+ white)))
+(defun static (position)
+	(let ((black 0) (white 0) (temp))
+		(cond
+			((null (generateSuccessorsNEW position 'B))
+				-1000000
+			)
+			((null (generateSuccessorsNEW position 'W))
+				1000000
+			)
+			(T
+				(do ((y 1 (1+ y))) ((> y 8) 'T)
+					(do ((x 1 (1+ x))) ((> x 8) 'T)
+						(setf temp (getValue staticWeights x y))
+						(if (equal (getValue position x y) 'B) (setf black (+ black temp)))
+						(if (equal (getValue position x y) 'W) (setf white (+ white temp)))
+					)
+				)
+				(- black white)
 			)
 		)
-		(if(equalp player 'B)
-		(- black white)(- white black))
-		
 	)
 )
+
+(setf staticWeights '(99 -8 8 6 6 8 -8 99
+					  -8 -24 -4 -3 -3 -4 -24 -8
+					  8 -4 7 4 4 7 -4 8
+					  6 -3 4 0 0 4 -3 6
+					  6 -3 4 0 0 4 -3 6
+					  8 -4 7 4 4 7 -4 8
+					  -8 -24 -4 -3 -3 -4 -24 -8
+					  99 -8 8 6 6 8 -8 99))
 
 (defun printBoard (board)
 	"Prints the board to the string with column and row numbers"
 	(format t "  ~D ~D ~D ~D ~D ~D ~D ~D~%" 1 2 3 4 5 6 7 8)
-	
+
 	(do ((y 1 (1+ y))) ((> y 8) 'T)
 		(format t "~D " y)
 		(do ((x 1 (1+ x))) ((> x 8) 'T)
