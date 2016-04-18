@@ -7,11 +7,11 @@
 (defun static (position)
 	(let ((black 0) (white 0) (temp))
 		(cond
-			((null (generateSuccessorsNEW position 'B))
-				-1000000
+			((null (generateSuccessors position 'B))
+				-10000
 			)
-			((null (generateSuccessorsNEW position 'W))
-				1000000
+			((null (generateSuccessors position 'W))
+				10000
 			)
 			(T
 				(do ((y 1 (1+ y))) ((> y 8) 'T)
@@ -39,7 +39,7 @@
 (defun printBoard (board)
 	"Prints the board to the string with column and row numbers"
 	(format t "  ~D ~D ~D ~D ~D ~D ~D ~D~%" 1 2 3 4 5 6 7 8)
-	
+
 	(do ((y 1 (1+ y))) ((> y 8) 'T)
 		(format t "~D " y)
 		(do ((x 1 (1+ x))) ((> x 8) 'T)
@@ -73,19 +73,6 @@
 )
 
 (defun generateSuccessors (board color)
-	(let ((openPos) (x) (y))
-		(do ((y 1 (1+ y))) ((> y 8) 'T)
-			(do ((x 1 (1+ x))) ((> x 8) 'T)
-				(if (and (equalp (getValue board x y) '-) (validMove board color x y) )
-					(setf openPos (append openPos (list (make-point :x x :y y))))
-				)
-			)
-		)
-		openPos
-	)
-)
-
-(defun generateSuccessorsNEW (board color)
 	(let ((x) (y) (successors) (newBoard))
 		(do ((y 1 (1+ y))) ((> y 8) 'T)
 			(do ((x 1 (1+ x))) ((> x 8) 'T)
