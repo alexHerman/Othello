@@ -106,13 +106,11 @@ Note: these functions may need additional arguments.
 
 )
 
-
-
 (defun minimax (position depth player)
 	; if we have searched deep enough, or there are no successors,
 	; return position evaluation and nil for the path
 	(if (or (deepenough depth) (gameOver position))
-		(list (static position) (list position))
+		(list (static position player) (list (list position) NIL))
 
     ; otherwise, generate successors and run minimax recursively
 		(let
@@ -140,7 +138,7 @@ Note: these functions may need additional arguments.
 					(dolist (successor successors)
 
 						; perform recursive DFS exploration of game tree
-						(setq successor-value (minimax successor (1- depth) turn))
+						(setq successor-value (minimax (car successor) (1- depth) turn))
 
 
 						; change sign every ply to reflect alternating selection
@@ -165,23 +163,23 @@ Note: these functions may need additional arguments.
 					(list best-score best-path)
 
 				)
-				(T (list (static position) (list position)))
+				(T (list (static position player) (list (list position) NIL)))
 			)
 		)
 	)
 )
 
-(defun makemove (board player depth)
-	(car (cadr (minimax board depth player)))
+(defun make-move (board player depth)
+	(cadr (caadr (minimax board depth player)))
 )
 
 (defun testAI ()
-	(let ((current start) (turn 'B) (test))
+	(let ((current start) (turn 'W) (test))
 		(printBoard current)
 		(do () ((gameOver current) (gameOver current))
 			(if (equal turn 'W) (setf turn 'B) (setf turn 'W))
 			(setf test (minimax current 3 turn))
-			(setf current (car (cadr test)))
+			(setf current (caaadr test))
 			(printBoard current)
 		)
 	)
@@ -189,10 +187,10 @@ Note: these functions may need additional arguments.
 
 (defun testHuman ()
 	(let ((playerColor) (turn) (path) (row) (col) (current) (temp))
-		(print "Do you want to go first [y/n]?: ")
+		(format t "Do you want to go first [y/n]?: ")
 		(if (equal (read) 'y) (setf playerColor 'B) (setf playerColor 'W))
 		(if (equal playerColor 'W) (setf turn 'B) (setf turn 'W))
-		(setf current error)
+		(setf current start)
 		(printBoard current)
 
 		(cond
@@ -206,17 +204,20 @@ Note: these functions may need additional arguments.
 						(setf current temp)
 						(format t "That is an invalid move, you have forfeit your turn")
 					)
+					(format t "~%")
 					(printBoard current)
 					(when (null (gameOver current))
-						(setf path (minimax current 3 turn))
-						(setf current (car (cadr path)))
+						(setf path (minimax current 4 turn))
+						(setf current (caaadr path))
+						(format t "Here is my move: ~a~%~%" (cadr (caadr path)))
 					)
 					(printBoard current)
 				)
 			)
 			(T
 				(do () ((gameOver current) (gameOver current))
-					(setf path (minimax current 3 turn))
+					(setf path (minimax current 4 turn))
+					(format t "Here is my move: ~a~%~%" (cadr (caadr path)))
 					(setf current (car (cadr path)))
 					(printBoard current)
 					(when (null (gameOver current))
@@ -228,6 +229,7 @@ Note: these functions may need additional arguments.
 							(setf current temp)
 							(format t "That is an invalid move, you have forfeit your turn~%~%")
 						)
+						(format t "~%")
 						(printBoard current)
 					)
 				)
@@ -240,7 +242,7 @@ Note: these functions may need additional arguments.
 
 
 (defun test ()
-	(printBoard (car (cadr (minimax-withprint errorTest 4 'B))))
+	(printBoard (car (cadr (minimax start 4 'B))))
 )
 
 (defun test-minimax (position depth player filename)
@@ -250,7 +252,7 @@ Note: these functions may need additional arguments.
 	)
 )
 
-(setf errorTest '(W B - W - W W W B B B B B W W - W B W W W W W W W W B W W B W W W W W W B W B W W B W B W B B W B B B B B B B B W - - B B B B W))
+(setf testthis '(- - - - - - - - - - - - - - - - - - W W W W - - - - - B B - - - - - B W B B - - - B W - - - - - - - - - - - - - - - - - - - - - ))
 
 ;(test-minimax test1 1 'B "othello_test1-1.txt")
 ;(test-minimax test1 2 'B "othello_test1-2.txt")

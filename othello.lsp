@@ -4,13 +4,13 @@
 	(<= depth 0)
 )
 
-(defun static (position)
+(defun static (position player)
 	(let ((black 0) (white 0) (temp))
 		(cond
-			((null (generateSuccessors position 'B))
+			((null (hasSuccessor position 'B))
 				-10000
 			)
-			((null (generateSuccessors position 'W))
+			((null (hasSuccessor position 'W))
 				10000
 			)
 			(T
@@ -21,7 +21,7 @@
 						(if (equal (getValue position x y) 'W) (setf white (+ white temp)))
 					)
 				)
-				(- black white)
+				(if (equal player 'B) (- black white) (- white black))
 			)
 		)
 	)
@@ -72,13 +72,23 @@
 	)
 )
 
+(defun hasSuccessor (board color)
+	(let ((x) (y) (newBoard))
+		(do ((y 1 (1+ y))) ((or (> y 8) newBoard) newBoard)
+			(do ((x 1 (1+ x))) ((or (> x 8) newBoard) newBoard)
+				(setf newBoard (validMove board color x y))
+			)
+		)
+	)
+)
+
 (defun generateSuccessors (board color)
 	(let ((x) (y) (successors) (newBoard))
 		(do ((y 1 (1+ y))) ((> y 8) 'T)
 			(do ((x 1 (1+ x))) ((> x 8) 'T)
 				(setf newBoard (validMove board color x y))
 				(when newBoard
-					(setf successors (append successors (list newBoard)))
+					(setf successors (append successors (list (list newBoard (list y x)))))
 				)
 			)
 		)
@@ -91,7 +101,7 @@
 	(let ((black 0) (white 0))
 		(cond
 			; If there are no more available moves
-			((and (null (generateSuccessors board 'W)) (null (generateSuccessors board 'B)))
+			((and (null (hasSuccessor board 'W)) (null (hasSuccessor board 'B)))
 				; Find the winner of the game
 				(do ((y 1 (1+ y))) ((> y 8) 'T)
 					(do ((x 1 (1+ x))) ((> x 8) 'T)
@@ -162,14 +172,6 @@
 	)
 )
 
-(setf error '(- - - - - - - -
-	- - - - - - - -
-	- - - - - - - -
-	- - - - W W B -
-	- - - W W - - -
-	- - - W - - - -
-	- - - B - - - -
-- - - - - - - -))
 (setf start '(- - - - - - - -
 	- - - - - - - -
 	- - - - - - - -
