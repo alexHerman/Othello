@@ -1,0 +1,238 @@
+Depth: 2 Player: W 
+  1 2 3 4 5 6 7 8
+1 - - - - - - - - 
+2 - - - - - - - - 
+3 - - W W W W - - 
+4 - - - B B - - - 
+5 - - B W B B - - 
+6 - B W - - - - - 
+7 - - - - - - - - 
+8 - - - - - - - - 
+
+Depth: 1 Player: B 
+  1 2 3 4 5 6 7 8
+1 - - - - - - - - 
+2 - - - - - - - - 
+3 - - W W W W - - 
+4 - - W B B - - - 
+5 - - W W B B - - 
+6 - B W - - - - - 
+7 - - - - - - - - 
+8 - - - - - - - - 
+
+Depth: 0 Player: W Successor Score: -47 Best Score: -47 Beta: -1000
+Move: (2 2)
+Depth: 0 Player: W Successor Score: -33 Best Score: -33 Beta: -1000
+Move: (2 3)
+Depth: 0 Player: W Successor Score: -32 Best Score: -32 Beta: -1000
+Move: (2 4)
+Depth: 0 Player: W Successor Score: -32 Best Score: -32 Beta: -1000
+Move: (2 5)
+Depth: 0 Player: W Successor Score: -33 Best Score: -32 Beta: -1000
+Move: (2 6)
+Depth: 0 Player: W Successor Score: -47 Best Score: -32 Beta: -1000
+Move: (2 7)
+Depth: 0 Player: W Successor Score: -32 Best Score: -32 Beta: -1000
+Move: (4 2)
+Depth: 0 Player: W Successor Score: -32 Best Score: -32 Beta: -1000
+Move: (5 2)
+Depth: 0 Player: W Successor Score: -19 Best Score: -19 Beta: -1000
+Move: (6 4)
+Depth: 0 Player: W Successor Score: -47 Best Score: -19 Beta: -1000
+Move: (7 2)
+Depth: 1 Player: B Successor Score: 19 Best Score: 19 Beta: -1000
+Move: (4 3)
+Depth: 1 Player: B 
+  1 2 3 4 5 6 7 8
+1 - - - - - - - - 
+2 - - - - - - - - 
+3 - - W W W W - - 
+4 - - - B B - - - 
+5 - W W W B B - - 
+6 - B W - - - - - 
+7 - - - - - - - - 
+8 - - - - - - - - 
+
+Depth: 0 Player: W Successor Score: -40 Best Score: -40 Beta: 19
+Move: (2 2)
+Depth: 0 Player: W Successor Score: -26 Best Score: -26 Beta: 19
+Move: (2 3)
+Depth: 0 Player: W Successor Score: -25 Best Score: -25 Beta: 19
+Move: (2 4)
+Depth: 0 Player: W Successor Score: -25 Best Score: -25 Beta: 19
+Move: (2 5)
+Depth: 0 Player: W Successor Score: -26 Best Score: -25 Beta: 19
+Move: (2 6)
+Depth: 0 Player: W Successor Score: -40 Best Score: -25 Beta: 19
+Move: (2 7)
+Depth: 0 Player: W Successor Score: -39 Best Score: -25 Beta: 19
+Move: (4 2)
+Depth: 0 Player: W Successor Score: -22 Best Score: -22 Beta: 19
+Move: (5 1)
+Depth: 0 Player: W Successor Score: -12 Best Score: -12 Beta: 19
+Move: (6 4)
+Pruned branch.
+Depth: 1 Player: B Successor Score: 12 Best Score: 19 Beta: 19
+Move: (5 2)
+Depth: 1 Player: B 
+  1 2 3 4 5 6 7 8
+1 - - - - - - - - 
+2 - - - - - - - - 
+3 - - W W W W - - 
+4 - - - B B - - - 
+5 - - B W W W W - 
+6 - B W - - - - - 
+7 - - - - - - - - 
+8 - - - - - - - - 
+
+Depth: 0 Player: W Successor Score: -40 Best Score: -40 Beta: 19
+Move: (2 2)
+Depth: 0 Player: W Successor Score: -26 Best Score: -26 Beta: 19
+Move: (2 3)
+Depth: 0 Player: W Successor Score: -25 Best Score: -25 Beta: 19
+Move: (2 4)
+Depth: 0 Player: W Successor Score: -25 Best Score: -25 Beta: 19
+Move: (2 5)
+Depth: 0 Player: W Successor Score: -26 Best Score: -25 Beta: 19
+Move: (2 6)
+Depth: 0 Player: W Successor Score: -40 Best Score: -25 Beta: 19
+Move: (2 7)
+Depth: 0 Player: W Successor Score: -22 Best Score: -22 Beta: 19
+Move: (5 8)
+Depth: 0 Player: W Successor Score: -12 Best Score: -12 Beta: 19
+Move: (6 4)
+Pruned branch.
+Depth: 1 Player: B Successor Score: 12 Best Score: 19 Beta: 19
+Move: (5 7)
+Depth: 1 Player: B 
+  1 2 3 4 5 6 7 8
+1 - - - - - - - - 
+2 - - - - - - - - 
+3 - - W W W W - - 
+4 - - - B B - - - 
+5 - - B W B B - - 
+6 W W W - - - - - 
+7 - - - - - - - - 
+8 - - - - - - - - 
+
+Depth: 0 Player: W Successor Score: -35 Best Score: -35 Beta: 19
+Move: (2 2)
+Depth: 0 Player: W Successor Score: -21 Best Score: -21 Beta: 19
+Move: (2 3)
+Depth: 0 Player: W Successor Score: -20 Best Score: -20 Beta: 19
+Move: (2 4)
+Depth: 0 Player: W Successor Score: -20 Best Score: -20 Beta: 19
+Move: (2 5)
+Depth: 0 Player: W Successor Score: -21 Best Score: -20 Beta: 19
+Move: (2 6)
+Depth: 0 Player: W Successor Score: -35 Best Score: -20 Beta: 19
+Move: (2 7)
+Depth: 0 Player: W Successor Score: -21 Best Score: -20 Beta: 19
+Move: (6 4)
+Depth: 0 Player: W Successor Score: -41 Best Score: -20 Beta: 19
+Move: (7 1)
+Depth: 0 Player: W Successor Score: -35 Best Score: -20 Beta: 19
+Move: (7 2)
+Depth: 0 Player: W Successor Score: -15 Best Score: -15 Beta: 19
+Move: (7 3)
+Pruned branch.
+Depth: 1 Player: B Successor Score: 15 Best Score: 19 Beta: 19
+Move: (6 1)
+Depth: 1 Player: B 
+  1 2 3 4 5 6 7 8
+1 - - - - - - - - 
+2 - - - - - - - - 
+3 - - W W W W - - 
+4 - - - B W - - - 
+5 - - B W W B - - 
+6 - B W - W - - - 
+7 - - - - - - - - 
+8 - - - - - - - - 
+
+Depth: 0 Player: W Successor Score: -39 Best Score: -39 Beta: 19
+Move: (2 2)
+Depth: 0 Player: W Successor Score: -25 Best Score: -25 Beta: 19
+Move: (2 3)
+Depth: 0 Player: W Successor Score: -24 Best Score: -24 Beta: 19
+Move: (2 4)
+Depth: 0 Player: W Successor Score: -25 Best Score: -24 Beta: 19
+Move: (2 6)
+Depth: 0 Player: W Successor Score: -25 Best Score: -24 Beta: 19
+Move: (4 6)
+Depth: 0 Player: W Successor Score: -11 Best Score: -11 Beta: 19
+Move: (6 4)
+Pruned branch.
+Depth: 1 Player: B Successor Score: 11 Best Score: 19 Beta: 19
+Move: (6 5)
+Depth: 1 Player: B 
+  1 2 3 4 5 6 7 8
+1 - - - - - - - - 
+2 - - - - - - - - 
+3 - - W W W W - - 
+4 - - - W B - - - 
+5 - - B W W B - - 
+6 - B W - - W - - 
+7 - - - - - - - - 
+8 - - - - - - - - 
+
+Depth: 0 Player: W Successor Score: -28 Best Score: -28 Beta: 19
+Move: (2 3)
+Depth: 0 Player: W Successor Score: -27 Best Score: -27 Beta: 19
+Move: (2 5)
+Depth: 0 Player: W Successor Score: -28 Best Score: -27 Beta: 19
+Move: (2 6)
+Depth: 0 Player: W Successor Score: -42 Best Score: -27 Beta: 19
+Move: (2 7)
+Depth: 0 Player: W Successor Score: -28 Best Score: -27 Beta: 19
+Move: (4 3)
+Depth: 0 Player: W Successor Score: -14 Best Score: -14 Beta: 19
+Move: (6 4)
+Pruned branch.
+Depth: 1 Player: B Successor Score: 14 Best Score: 19 Beta: 19
+Move: (6 6)
+Depth: 1 Player: B 
+  1 2 3 4 5 6 7 8
+1 - - - - - - - - 
+2 - - - - - - - - 
+3 - - W W W W - - 
+4 - - - B W - - - 
+5 - - B W B W - - 
+6 - B W - - - W - 
+7 - - - - - - - - 
+8 - - - - - - - - 
+
+Depth: 0 Player: W Successor Score: -39 Best Score: -39 Beta: 19
+Move: (2 2)
+Depth: 0 Player: W Successor Score: -24 Best Score: -24 Beta: 19
+Move: (2 4)
+Depth: 0 Player: W Successor Score: -24 Best Score: -24 Beta: 19
+Move: (2 5)
+Depth: 0 Player: W Successor Score: -25 Best Score: -24 Beta: 19
+Move: (2 6)
+Depth: 0 Player: W Successor Score: -25 Best Score: -24 Beta: 19
+Move: (4 6)
+Depth: 0 Player: W Successor Score: -24 Best Score: -24 Beta: 19
+Move: (5 7)
+Depth: 0 Player: W Successor Score: -11 Best Score: -11 Beta: 19
+Move: (6 4)
+Pruned branch.
+Depth: 1 Player: B Successor Score: 11 Best Score: 19 Beta: 19
+Move: (6 7)
+Depth: 1 Player: B 
+  1 2 3 4 5 6 7 8
+1 - - - - - - - - 
+2 - - - - - - - - 
+3 - - W W W W - - 
+4 - - - W B - - - 
+5 - - W W B B - - 
+6 - W W - - - - - 
+7 W - - - - - - - 
+8 - - - - - - - - 
+
+Depth: 0 Player: W Successor Score: -27 Best Score: -27 Beta: 19
+Move: (2 2)
+Depth: 0 Player: W Successor Score: -13 Best Score: -13 Beta: 19
+Move: (2 3)
+Pruned branch.
+Depth: 1 Player: B Successor Score: 13 Best Score: 19 Beta: 19
+Move: (7 1)

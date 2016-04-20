@@ -1,5 +1,3 @@
-(defstruct point x y)
-
 (defun deepenough (depth)
 	(<= depth 0)
 )
@@ -180,29 +178,3 @@
 	- - - - - - - -
 	- - - - - - - -
 - - - - - - - -))
-
-(setf test1 '(- - - - - - - -
-	- - - - - - - -
-	- - - - - - - -
-	- - - W B - - -
-	- - - W W W W -
-	- - - W - - - -
-	- - - - - - - -
-- - - - - - - -))
-
-(setf test1-W '(- - - - - - - -
-	- - - - - - - -
-	- - - - - - - -
-	- - - B W - - -
-	- - - B B B B -
-	- - - B - - - -
-	- - - - - - - -
-- - - - - - - -))
-(setf test2 '(- - B B - - - -
-	- - - B W B - -
-	- W B B W W W B
-	B B W W W B W W
-	B W W W B B B W
-	B W - W W - W B
-	- - - W B - - -
-- - - - B - - -))
