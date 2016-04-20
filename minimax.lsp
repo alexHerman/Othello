@@ -32,6 +32,7 @@ Note: these functions may need additional arguments.
 ;(load 'othello)
 (load (merge-pathnames "othello.lsp" *load-truename*))
 (load (merge-pathnames "test-minimax.lsp" *load-truename*))
+		(setf beta -1000)
 
 (defun minimax (position depth player)
 	; if we have searched deep enough, or there are no successors,
@@ -97,13 +98,14 @@ Note: these functions may need additional arguments.
 )
 
 (defun make-move (board player depth)
-	(let (beta -1000)
+
+		(setf beta -1000)
 	(cadr (caadr (minimax board depth player)))
-	)
+
 )
 
 (defun testAI ()
-	(let ((current start) (turn 'W) (test) (beta))
+	(let ((current start) (turn 'W) (test))
 		(printBoard current)
 		(do () ((gameOver current) (gameOver current))
 			(if (equal turn 'W) (setf turn 'B) (setf turn 'W))
@@ -116,7 +118,7 @@ Note: these functions may need additional arguments.
 )
 
 (defun testHuman ()
-	(let ((playerColor) (turn) (path) (row) (col) (current) (temp) (beta))
+	(let ((playerColor) (turn) (path) (row) (col) (current) (temp))
 		(format t "Do you want to go first [y/n]?: ")
 		(if (equal (read) 'y) (setf playerColor 'B) (setf playerColor 'W))
 		(if (equal playerColor 'W) (setf turn 'B) (setf turn 'W))
