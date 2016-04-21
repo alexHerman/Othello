@@ -122,10 +122,11 @@ Note: these functions may need additional arguments.
 		(if (equal (read) 'y) (setf playerColor 'B) (setf playerColor 'W))
 		(if (equal playerColor 'W) (setf turn 'B) (setf turn 'W))
 		(setf current start)
-		(printBoard current)
 
 		(cond
 			((equal playerColor 'B)
+				(format t "~%OK! You will be playing Black. When asked for your move, please enter the row and column in which you would like to place a Black stone. Remember, you must outflank at least one White stone, or forfeit your move.~%~%")
+				(printBoard current)
 				(do () ((gameOver current) (gameOver current))
 					(format t "What is your move [row col]: ")
 					(setf row (read))
@@ -147,6 +148,8 @@ Note: these functions may need additional arguments.
 				)
 			)
 			(T
+				(format t "~%OK! You will be playing White. When asked for your move, please enter the row and column in which you would like to place a White stone. Remember, you must outflank at least one Black stone, or forfeit your move.~%~%")
+				(printBoard current)
 				(do () ((gameOver current) (gameOver current))
 					(setf beta -1000)
 					(setf path (minimax current 4 turn))
