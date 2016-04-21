@@ -29,7 +29,6 @@ applies the static evaluation function to the position.
 
 Note: these functions may need additional arguments.
 |#
-;(load 'othello)
 (load (merge-pathnames "othello.lsp" *load-truename*))
 (load (merge-pathnames "test-minimax.lsp" *load-truename*))
 		(setf beta -1000)
@@ -104,7 +103,7 @@ Note: these functions may need additional arguments.
 
 )
 
-(defun testAI ()
+(defun othello ()
 	(let ((current start) (turn 'W) (test))
 		(printBoard current)
 		(do () ((gameOver current) (gameOver current))
@@ -170,8 +169,4 @@ Note: these functions may need additional arguments.
 			)
 		)
 	)
-)
-
-(defun test ()
-	(printBoard (car (cadr (minimax start 4 'B))))
 )

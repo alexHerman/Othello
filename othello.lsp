@@ -5,11 +5,11 @@
 (defun static (position player)
 	(let ((black 0) (white 0) (temp))
 		(cond
-			((null (hasSuccessor position 'B))
-				-10000
+			((equal (gameOver position) 'B)
+				(if (equal player 'B) 10000 -10000)
 			)
-			((null (hasSuccessor position 'W))
-				10000
+			((equal (gameOver position) 'W)
+				(if (equal player 'B) -10000 10000)
 			)
 			(T
 				(do ((y 1 (1+ y))) ((> y 8) 'T)
