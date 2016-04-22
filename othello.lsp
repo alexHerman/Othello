@@ -1,16 +1,32 @@
+; Gives certain locations greater value than others
+(defconstant staticWeights '(99 -8 8 6 6 8 -8 99
+	-8 -24 -4 -3 -3 -4 -24 -8
+	8 -4 7 4 4 7 -4 8
+	6 -3 4 0 0 4 -3 6
+	6 -3 4 0 0 4 -3 6
+	8 -4 7 4 4 7 -4 8
+	-8 -24 -4 -3 -3 -4 -24 -8
+	99 -8 8 6 6 8 -8 99))
+
 (defun deepenough (depth)
+	"Returns true if the search has gone down to the specified ply"
 	(<= depth 0)
 )
 
 (defun static (position player)
+	"Evaluates the current board. A high positive number is good for the max player, and a high negative is good for the min player"
 	(let ((black 0) (white 0) (temp))
 		(cond
+			; If max has won, return infinity
 			((equal (gameOver position) 'B)
 				(if (equal player 'B) 10000 -10000)
 			)
+			; If min has won, return negative infinity
 			((equal (gameOver position) 'W)
 				(if (equal player 'B) -10000 10000)
 			)
+			; Calculates a point total for each player, max and min. The number of points that
+			; a specific location is worth can be seen in the staticWeights table below
 			(T
 				(do ((y 1 (1+ y))) ((> y 8) 'T)
 					(do ((x 1 (1+ x))) ((> x 8) 'T)
@@ -25,14 +41,6 @@
 	)
 )
 
-(setf staticWeights '(99 -8 8 6 6 8 -8 99
-	-8 -24 -4 -3 -3 -4 -24 -8
-	8 -4 7 4 4 7 -4 8
-	6 -3 4 0 0 4 -3 6
-	6 -3 4 0 0 4 -3 6
-	8 -4 7 4 4 7 -4 8
-	-8 -24 -4 -3 -3 -4 -24 -8
-99 -8 8 6 6 8 -8 99))
 
 (defun printBoard (board)
 	"Prints the board to the string with column and row numbers"
@@ -46,12 +54,6 @@
 		(format t "~%")
 	)
 	(format t "~%")
-)
-
-(defun printBoardList (lst)
-	(dolist (board lst)
-		(printBoard board)
-	)
 )
 
 (defun getValue (board x y)
@@ -71,7 +73,9 @@
 )
 
 (defun hasSuccessor (board color)
+	"Returns true if the given player has any successors for the given board."
 	(let ((x) (y) (newBoard))
+		; Return true after the first valid successor is found
 		(do ((y 1 (1+ y))) ((or (> y 8) newBoard) newBoard)
 			(do ((x 1 (1+ x))) ((or (> x 8) newBoard) newBoard)
 				(setf newBoard (validMove board color x y))
@@ -81,11 +85,15 @@
 )
 
 (defun generateSuccessors (board color)
+	"Returns a list of successors for the given board"
 	(let ((x) (y) (successors) (newBoard))
+		; Check every poisition on the board
 		(do ((y 1 (1+ y))) ((> y 8) 'T)
 			(do ((x 1 (1+ x))) ((> x 8) 'T)
+				; Get the new board. Will be NIL if position is invalid
 				(setf newBoard (validMove board color x y))
 				(when newBoard
+					; Add the new board and the position of the new stone to the list
 					(setf successors (append successors (list (list newBoard (list y x)))))
 				)
 			)
@@ -107,7 +115,7 @@
 						(if (equal (getValue board x y) 'B) (setf black (1+ black)))
 					)
 				)
-				; Return the winner, or a tie if relevant
+				; Return the winner, or a tie if if that is the case
 				(cond
 					((> black white) 'B)
 					((> white black) 'W)
@@ -127,6 +135,8 @@
 			; If the position does not already contain a piece
 			((equalp (getValue newboard x y) '-)
 				; Test every direction to find if this is a valid move
+				; Each direction will return the board with any pieces flipped over in the given direction
+				; If any pieces were flipped, then that version of the new board is saved
 				(setf temp (testDirection newboard player x y #'1- #'eval))
 				(when temp (setf isValid T) (setf newBoard temp))
 				(setf temp (testDirection newboard player x y #'1+ #'eval))
@@ -153,17 +163,23 @@
 
 (defun testDirection (newBoard player x y xMove yMove)
 	"Find if the new move captures any opponent pieces in a certain direction"
-	(let ((opponentEncountered NIL) (leaveLoop NIL) (val NIL) (board (setValue newBoard x y player)))
+	(let ((opponentEncountered) (leaveLoop) (val) (board (setValue newBoard x y player)))
 		(do () (leaveLoop board)
+			; Move x and y in the desired direction from the new piece to be set down
 			(setf x (funcall xMove x))
 			(setf y (funcall yMove y))
+			; Get the value of the board at the new location
 			(setf val (getValue board x y))
+
 			(cond
+				; Location contains piece of the same color as the current player
 				((equal val player)
 					(if (null opponentEncountered) (setf board NIL))
 					(setf leaveLoop T)
 				)
+				; Location contains no pieces
 				((or (equal val '-) (equal val NIL)) (setf board NIL) (setf leaveLoop T))
+				; Location contains opponents piece
 				(T (setf opponentEncountered T) (setf board (setValue board x y player)))
 			)
 		)
@@ -171,10 +187,10 @@
 )
 
 (setf start '(- - - - - - - -
-	- - - - - - - -
-	- - - - - - - -
-	- - - W B - - -
-	- - - B W - - -
-	- - - - - - - -
-	- - - - - - - -
-- - - - - - - -))
+			  - - - - - - - -
+			  - - - - - - - -
+			  - - - W B - - -
+			  - - - B W - - -
+			  - - - - - - - -
+			  - - - - - - - -
+			  - - - - - - - -))

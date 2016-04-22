@@ -109,7 +109,7 @@ Note: these functions may need additional arguments.
 		(do () ((gameOver current) (gameOver current))
 			(if (equal turn 'W) (setf turn 'B) (setf turn 'W))
 			(setf beta -1000)
-			(setf test (minimax current 3 turn))
+			(setf test (minimax current 4 turn))
 			(setf current (caaadr test))
 			(printBoard current)
 		)
