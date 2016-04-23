@@ -16,22 +16,22 @@
 - - - - - - - -))
 
 #|*****************************************************************************
-Function:   make-move 
+Function:   make-move
 Author:     Hannah Aker and Alex Herman
 Written Spring 2016 for CSC447/547 AI class.
-Description: 		
+Description:
 This function uses the minimax function to decide which move to make.
 *****************************************************************************|#
 (defun make-move (board player depth)
 	(cadr (caadr (minimax board depth player player -10000 10000)))
 )
 #|*****************************************************************************
-Function:   othello 
+Function:   othello
 Author:     Hannah Aker and Alex Herman
 Written Spring 2016 for CSC447/547 AI class.
-Description: 		
-This function is the standard entry point for the program, allows the user to 
-play against the computer. 
+Description:
+This function is the standard entry point for the program, allows the user to
+play against the computer.
 *****************************************************************************|#
 (defun othello ( &optional playerColor)
 	(let ((turn) (path) (row) (col) (current) (temp))
@@ -42,13 +42,13 @@ play against the computer.
 		)
 		(if (equal playerColor 'W) (setf turn 'B) (setf turn 'W))
 		(setf current start)
-		
+
 		(cond
 			((equal playerColor 'B)
 				(format t "~%OK! You will be playing Black. When asked for your move, please enter the row and column in which you would like to place a Black stone. Remember, you must outflank at least one White stone, or forfeit your move.~%~%")
 				(printBoard current)
 				(do () (
-					(setf stats (gameOver current)) 
+					(setf stats (gameOver current))
 					(cond
 						((> (car stats) (cadr stats)) (format t "Black wins! Black's Score: ~D White's Score: ~D~%" (car stats) (cadr stats)) 'B)
 						((> (cadr stats) (car stats)) (format t "White wins! Black's Score: ~D White's Score: ~D~%" (car stats) (cadr stats)) 'W)
@@ -65,7 +65,7 @@ play against the computer.
 					(format t "~%")
 					(printBoard current)
 					(when (null (gameOver current))
-						
+
 						(setf path (minimax current 4 turn turn -10000 10000))
 						(setf current (caaadr path))
 						(format t "Here is my move: ~a~%~%" (cadr (caadr path)))
@@ -77,13 +77,13 @@ play against the computer.
 				(format t "~%OK! You will be playing White. When asked for your move, please enter the row and column in which you would like to place a White stone. Remember, you must outflank at least one Black stone, or forfeit your move.~%~%")
 				(printBoard current)
 				(do () (
-					(setf stats (gameOver current)) 
+					(setf stats (gameOver current))
 					(cond
 						((> (car stats) (cadr stats)) (format t "Black wins! Black's Score: ~D White's Score: ~D~%" (car stats) (cadr stats)) 'B)
 						((> (cadr stats) (car stats)) (format t "White wins! Black's Score: ~D White's Score: ~D~%" (car stats) (cadr stats)) 'W)
 						(T (format t "TIE! Black's Score: ~D White's Score: ~D~%" (car stats) (cadr stats)) 'TIE)
 					))
-					
+
 					(setf path (minimax current 4 turn turn -10000 10000))
 					(format t "Here is my move: ~a~%~%" (cadr (caadr path)))
 					(setf current (car (cadr path)))
@@ -108,33 +108,33 @@ play against the computer.
 
 
 #|*****************************************************************************
-Function:   othello-init 
+Function:   othello-init
 Author:     Hannah Aker and Alex Herman
 Written Spring 2016 for CSC447/547 AI class.
-Description: 		
+Description:
 Empty function for othello initilization statements.
 *****************************************************************************|#
 (defun othello-init () )
 #|*****************************************************************************
-Function:   AIvsAI 
+Function:   AIvsAI
 Author:     Hannah Aker and Alex Herman
 Written Spring 2016 for CSC447/547 AI class.
-Description: 		
+Description:
 Plays the AI against itself.
 *****************************************************************************|#
 (defun AIvsAI ()
 	(let ((current start) (turn 'W) (test))
 		(printBoard current)
 		(do () (
-			(setf stats (gameOver current)) 
+			(setf stats (gameOver current))
 			(cond
 				((> (car stats) (cadr stats)) (format t "Black wins! Black's Score: ~D White's Score: ~D~%" (car stats) (cadr stats)) 'B)
 				((> (cadr stats) (car stats)) (format t "White wins! Black's Score: ~D White's Score: ~D~%" (car stats) (cadr stats)) 'W)
 				(T (format t "TIE! Black's Score: ~D White's Score: ~D~%" (car stats) (cadr stats)) 'TIE)
 			))
 			(if (equal turn 'W) (setf turn 'B) (setf turn 'W))
-			
-			(setf test (minimax current 2 turn turn -10000 10000))
+
+			(setf test (minimax current 4 turn turn -10000 10000))
 			(setf current (caaadr test))
 			(printBoard current)
 		)
@@ -144,16 +144,16 @@ Plays the AI against itself.
 
 
 #|*****************************************************************************
-Function:   printBoard 
+Function:   printBoard
 Author:     Hannah Aker and Alex Herman
 Written Spring 2016 for CSC447/547 AI class.
-Description: 		
-This function prints the board to a string with column and row numbers. 
+Description:
+This function prints the board to a string with column and row numbers.
 *****************************************************************************|#
 (defun printBoard (board)
 	"Prints the board to the string with column and row numbers"
 	(format t "  ~D ~D ~D ~D ~D ~D ~D ~D~%" 1 2 3 4 5 6 7 8)
-	
+
 	(do ((y 1 (1+ y))) ((> y 8) 'T)
 		(format t "~D " y)
 		(do ((x 1 (1+ x))) ((> x 8) 'T)
@@ -164,8 +164,4 @@ This function prints the board to a string with column and row numbers.
 	(format t "~%")
 )
 
-(othello *args*)
-
-
-
-
+(if *args* (othello *args*))
