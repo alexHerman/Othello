@@ -36,7 +36,6 @@ play against the computer.
 (defun othello ( &optional playerColor)
 	"This function is the standard entry point for the program, allows the user to play against the computer."
 	(let ((turn) (path) (row) (col) (current) (temp))
-		(print playerColor)
 		(cond
 			((null playerColor)
 				(format t "Which color would you like to play [Black/B/white/W]?: ")
@@ -44,10 +43,9 @@ play against the computer.
 				(if (or (equal playerColor 'B) (equal playerColor 'Black)) (setf playerColor 'B) (setf playerColor 'W))
 			)
 			(T
-				(if (or (equal (car playerColor) "B") (equal (car playerColor) "Black") (equal (car playerColor) "black")) (setf playerColor 'B))
-				(when (null (equal playerColor 'B))
-					(if (or (equal (car playerColor) "W") (equal (car playerColor) "White") (equal (car playerColor) "white")) (setf playerColor 'W))
-				)
+				(if (or (equal playerColor 'B) (equal playerColor 'Black) (equal playerColor 'black) (equal playerColor "B") (equal playerColor "Black") (equal playerColor "black")) (setf temp 'B))
+				(if (or (equal playerColor 'W) (equal playerColor 'White) (equal playerColor 'white) (equal playerColor "W") (equal playerColor "White") (equal playerColor "white")) (setf temp 'W))
+				(setf playerColor temp)
 			)
 		)
 		(if (equal playerColor 'W) (setf turn 'B) (setf turn 'W))
@@ -96,7 +94,7 @@ play against the computer.
 
 					(setf path (minimax current 4 turn turn -10000 10000))
 					(format t "Here is my move: ~a~%~%" (cadr (caadr path)))
-					(setf current (car (cadr path)))
+					(setf current (car (caadr path)))
 					(printBoard current)
 					(when (null (gameOver current))
 						(format t "What is your move [row col]: ")
@@ -124,7 +122,9 @@ Written Spring 2016 for CSC447/547 AI class.
 Description:
 Empty function for othello initilization statements.
 *****************************************************************************|#
-(defun othello-init () )
+(defun othello-init ()
+	(setf beta -1000)
+)
 #|*****************************************************************************
 Function:   AIvsAI
 Author:     Hannah Aker and Alex Herman
@@ -139,7 +139,7 @@ Plays the AI against itself.
 		(do () (
 			(setf stats (gameOver current))
 			(cond
-				((> (car stats) (cadr stats)) (format t "Black wins! Black's Score: ~D White's Score: ~D~%" (car stats) (cadr stats)) 'B)
+				((> (car stats) (cadr stats)) (format t "Black wins! Black's Score: ~D White's Score: ~D~%" (car stats) (cadr stats)))
 				((> (cadr stats) (car stats)) (format t "White wins! Black's Score: ~D White's Score: ~D~%" (car stats) (cadr stats)) 'W)
 				(T (format t "TIE! Black's Score: ~D White's Score: ~D~%" (car stats) (cadr stats)) 'TIE)
 			))
@@ -175,4 +175,4 @@ This function prints the board to a string with column and row numbers.
 	(format t "~%")
 )
 
-(if *args* (othello *args*))
+(if *args* (othello (car *args*)))

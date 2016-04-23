@@ -13,10 +13,10 @@
 
 
 #|*****************************************************************************
-Function:   deepenough 
+Function:   deepenough
 Author:     Hannah Aker and Alex Herman
 Written Spring 2016 for CSC447/547 AI class.
-Description: 		
+Description:
 This function returns true if the search has gone down to the specified
 ply.
 *****************************************************************************|#
@@ -26,12 +26,12 @@ ply.
 )
 
 #|*****************************************************************************
-Function:   static 
+Function:   static
 Author:     Hannah Aker and Alex Herman
 Written Spring 2016 for CSC447/547 AI class.
-Description: 		
+Description:
 This function evaluates the current board. A high positive number is good
-for the max player, and a high negative is good for the min player. 
+for the max player, and a high negative is good for the min player.
 *****************************************************************************|#
 (defun static (position maxplayer)
 	"Evaluates the current board. A high positive number is good for the max player, and a high negative is good for the min player"
@@ -63,10 +63,10 @@ for the max player, and a high negative is good for the min player.
 )
 
 #|*****************************************************************************
-Function:   getValue 
+Function:   getValue
 Author:     Hannah Aker and Alex Herman
 Written Spring 2016 for CSC447/547 AI class.
-Description: 		
+Description:
 This function gets the value of an x, y coordinate on the given board.
 *****************************************************************************|#
 (defun getValue (board x y)
@@ -78,10 +78,10 @@ This function gets the value of an x, y coordinate on the given board.
 )
 
 #|*****************************************************************************
-Function:   setValue 
+Function:   setValue
 Author:     Hannah Aker and Alex Herman
 Written Spring 2016 for CSC447/547 AI class.
-Description: 		
+Description:
 This function sets the value of an x, y coordinate on the given board.
 *****************************************************************************|#
 (defun setValue (board x y val)
@@ -93,10 +93,10 @@ This function sets the value of an x, y coordinate on the given board.
 )
 
 #|*****************************************************************************
-Function:   hasSucessor 
+Function:   hasSucessor
 Author:     Hannah Aker and Alex Herman
 Written Spring 2016 for CSC447/547 AI class.
-Description: 		
+Description:
 This function returns true if the given player has any successors for the
 given board.
 *****************************************************************************|#
@@ -113,10 +113,10 @@ given board.
 )
 
 #|*****************************************************************************
-Function:   generateSucessors 
+Function:   generateSucessors
 Author:     Hannah Aker and Alex Herman
 Written Spring 2016 for CSC447/547 AI class.
-Description: 		
+Description:
 This function returns a list of successors for the given player color and
 board.
 *****************************************************************************|#
@@ -139,10 +139,10 @@ board.
 )
 
 #|*****************************************************************************
-Function:   gameOver 
+Function:   gameOver
 Author:     Hannah Aker and Alex Herman
 Written Spring 2016 for CSC447/547 AI class.
-Description: 		
+Description:
 This function determines whether or not the game has ended. If it has, it
 returns the winner.
 *****************************************************************************|#
@@ -169,10 +169,10 @@ returns the winner.
 )
 
 #|*****************************************************************************
-Function:   validMove 
+Function:   validMove
 Author:     Hannah Aker and Alex Herman
 Written Spring 2016 for CSC447/547 AI class.
-Description: 		
+Description:
 This function determines if a certain x, y, position is a legal move for the given color.
 *****************************************************************************|#
 (defun validMove (newboard player x y)
@@ -209,10 +209,10 @@ This function determines if a certain x, y, position is a legal move for the giv
 )
 
 #|*****************************************************************************
-Function:   testDirection 
+Function:   testDirection
 Author:     Hannah Aker and Alex Herman
 Written Spring 2016 for CSC447/547 AI class.
-Description: 		
+Description:
 This function finds if the new move captures any opponent pieces in a certain direction.
 *****************************************************************************|#
 (defun testDirection (newBoard player x y xMove yMove)
@@ -224,7 +224,7 @@ This function finds if the new move captures any opponent pieces in a certain di
 			(setf y (funcall yMove y))
 			; Get the value of the board at the new location
 			(setf val (getValue board x y))
-			
+
 			(cond
 				; Location contains piece of the same color as the current player
 				((equal val player)
@@ -239,4 +239,3 @@ This function finds if the new move captures any opponent pieces in a certain di
 		)
 	)
 )
-
