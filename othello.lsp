@@ -164,6 +164,7 @@ This function prints the board to a string with column and row numbers.
 	(format t "~%")
 )
 
+(othello *args*)
 
 
 
