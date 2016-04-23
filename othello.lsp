@@ -1,7 +1,6 @@
 #|*****************************LOADED FILES**********************************|#
 (load (merge-pathnames "minimax.lsp" *load-truename*))
 (load (merge-pathnames "minimax-functions.lsp" *load-truename*))
-;(load (merge-pathnames "test-minimax.lsp" *load-truename*))
 
 #|******************************CONSTANTS************************************|#
 ;standard start position of board
@@ -23,6 +22,7 @@ Description:
 This function uses the minimax function to decide which move to make.
 *****************************************************************************|#
 (defun make-move (board player depth)
+	"This function uses the minimax function to decide which move to make."
 	(cadr (caadr (minimax board depth player player -10000 10000)))
 )
 #|*****************************************************************************
@@ -34,11 +34,21 @@ This function is the standard entry point for the program, allows the user to
 play against the computer.
 *****************************************************************************|#
 (defun othello ( &optional playerColor)
+	"This function is the standard entry point for the program, allows the user to play against the computer."
 	(let ((turn) (path) (row) (col) (current) (temp))
-		(when (null playerColor)
-			(format t "Which color would you like to play [Black/B/white/W]?: ")
-			(setf playerColor (read))
-			(if (or (equal playerColor 'B) (equal playerColor 'Black)) (setf playerColor 'B) (setf playerColor 'W))
+		(print playerColor)
+		(cond
+			((null playerColor)
+				(format t "Which color would you like to play [Black/B/white/W]?: ")
+				(setf playerColor (read))
+				(if (or (equal playerColor 'B) (equal playerColor 'Black)) (setf playerColor 'B) (setf playerColor 'W))
+			)
+			(T
+				(if (or (equal (car playerColor) "B") (equal (car playerColor) "Black") (equal (car playerColor) "black"))
+					(setf playerColor 'B)
+					(if (or (equal (car playerColor) "W") (equal (car playerColor) "White") (equal (car playerColor) "white")) (setf playerColor 'W))
+				)
+			)
 		)
 		(if (equal playerColor 'W) (setf turn 'B) (setf turn 'W))
 		(setf current start)
@@ -123,6 +133,7 @@ Description:
 Plays the AI against itself.
 *****************************************************************************|#
 (defun AIvsAI ()
+	"Plays the AI against itself."
 	(let ((current start) (turn 'W) (test))
 		(printBoard current)
 		(do () (
