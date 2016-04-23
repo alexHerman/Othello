@@ -44,8 +44,8 @@ play against the computer.
 				(if (or (equal playerColor 'B) (equal playerColor 'Black)) (setf playerColor 'B) (setf playerColor 'W))
 			)
 			(T
-				(if (or (equal (car playerColor) "B") (equal (car playerColor) "Black") (equal (car playerColor) "black"))
-					(setf playerColor 'B)
+				(if (or (equal (car playerColor) "B") (equal (car playerColor) "Black") (equal (car playerColor) "black")) (setf playerColor 'B))
+				(when (null (equal playerColor 'B))
 					(if (or (equal (car playerColor) "W") (equal (car playerColor) "White") (equal (car playerColor) "white")) (setf playerColor 'W))
 				)
 			)
