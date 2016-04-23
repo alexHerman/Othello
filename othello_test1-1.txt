@@ -1,4 +1,4 @@
-Depth: 1 Player: B 
+Depth: 1 Player: B Beta: 10000 Alpha: -10000
   1 2 3 4 5 6 7 8
 1 - - - - - - - - 
 2 - - - - - - - - 
@@ -9,47 +9,16 @@ Depth: 1 Player: B
 7 - - - - - - - - 
 8 - - - - - - - - 
 
-Depth: 0 Player: W Successor Score: -1 Best Score: -1 Beta: -1000
-  1 2 3 4 5 6 7 8
-1 - - - - - - - - 
-2 - - - - - - - - 
-3 - - - - - - - - 
-4 - - B B B - - - 
-5 - - - W W W W - 
-6 - - - W - - - - 
-7 - - - - - - - - 
-8 - - - - - - - - 
-
-Depth: 0 Player: W Successor Score: 2 Best Score: 2 Beta: -1000
-  1 2 3 4 5 6 7 8
-1 - - - - - - - - 
-2 - - - - - - - - 
-3 - - - - - - - - 
-4 - - - W B - - - 
-5 - - - B W W W - 
-6 - - B W - - - - 
-7 - - - - - - - - 
-8 - - - - - - - - 
-
-Depth: 0 Player: W Successor Score: -1 Best Score: 2 Beta: -1000
-  1 2 3 4 5 6 7 8
-1 - - - - - - - - 
-2 - - - - - - - - 
-3 - - - - - - - - 
-4 - - - W B - - - 
-5 - - - W B W W - 
-6 - - - W B - - - 
-7 - - - - - - - - 
-8 - - - - - - - - 
-
-Depth: 0 Player: W Successor Score: -1 Best Score: 2 Beta: -1000
-  1 2 3 4 5 6 7 8
-1 - - - - - - - - 
-2 - - - - - - - - 
-3 - - - - - - - - 
-4 - - - W B - - - 
-5 - - - W W B W - 
-6 - - - W - - B - 
-7 - - - - - - - - 
-8 - - - - - - - - 
-
+Depth: 0 Player: W Move: (4 3) SEF: -1 Beta: 10000 Alpha: -1
+Depth: 0 Player: W Move: (6 3) SEF: 2 Beta: 10000 Alpha: 2
+Depth: 0 Player: W Move: (6 5) SEF: -1 Beta: 10000 Alpha: 2
+Depth: 0 Player: W Move: (6 7) SEF: -1 Beta: 10000 Alpha: 2
+Best Path: 
+(2
+ (((- - - - - - - - - - - - - - - - - - - - - - - - - - - W B - - - - - - B W W
+    W - - - B W - - - - - - - - - - - - - - - - - - - -)
+   (6 3))
+  (- - - - - - - - - - - - - - - - - - - - - - - - - - - W B - - - - - - B W W
+   W - - - B W - - - - - - - - - - - - - - - - - - - -)
+  -1 10000)
+ 2 10000)
